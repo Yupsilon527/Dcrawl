@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2739647065591249396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.25, z: -0.25}
   m_LocalScale: {x: 1.6666665, y: 1.6666665, z: 1.6666665}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,7 +42,7 @@ Camera:
   m_GameObject: {fileID: 2739647065591249396}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -64,7 +64,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2739647066059456400}
   - component: {fileID: 7838038703135044375}
   - component: {fileID: 491365784122094299}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,3 +331,6 @@ MonoBehaviour:
   parent: {fileID: 0}
   emptyTileSound: {fileID: 8300000, guid: ea842d3a1eaa01340bd1703a093be3b2, type: 3}
   solidTileSound: {fileID: 8300000, guid: 6c9d94b331508cd48aba93dcc5b41184, type: 3}
+  SoundParticle: {fileID: 9109303407789349486, guid: f2fdb4423d91a1e4a86d1534c71bece9, type: 3}
+  CuriosityParticle: {fileID: 2564265579650242637, guid: a22eb188c8ee3f64d905231dacf491c3, type: 3}
+  ParticleInterval: 0.25

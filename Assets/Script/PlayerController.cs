@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     }
     public void HandleEcho()
     {
-        //TODO
+        if (PlayerMob.main != null && PlayerMob.main.sense != null)
+            PlayerMob.main.sense.HandlePlayerEcho();
     }
 }

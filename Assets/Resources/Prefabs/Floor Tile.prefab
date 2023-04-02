@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4511834116760265033}
   - component: {fileID: 896268574594374909}
   - component: {fileID: 5209260470809346853}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,3 +133,4 @@ MonoBehaviour:
   room: {fileID: 0}
   mesh: {fileID: 2268866031615357247}
   neighbors: []
+  LocatedEntity: {fileID: 0}

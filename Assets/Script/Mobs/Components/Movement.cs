@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : BaseComponent
 {
+    public AudioClip footstepSound;
+    public AudioClip wallbumpSound;
     #region Facing
     public enum Direction
     {
@@ -38,11 +40,27 @@ public class Movement : BaseComponent
     public void MoveDirection(Direction dir)
     {
         Vector2Int pos = myTile.gridPos + GetForward(dir);
-        DisplayItemTile nTile = DataItemWorld.main.GetTile(pos.x,pos.y,true);
-        if (nTile!=null && !nTile.data.Solid)
+        DisplayItemTile nTile = GetForwardTile();
+        if (nTile != null)
         {
-            ChangeTile(nTile);
+
+            if (nTile.data.Solid)
+            {
+                if (parent.audio != null && wallbumpSound != null)
+                    parent.audio.PlayOneShot(wallbumpSound);
+            }
+                else
+            {
+                if (parent.audio != null && footstepSound != null)
+                    parent.audio.PlayOneShot(footstepSound);
+                ChangeTile(nTile);
+                   }
         }
+    }
+    public DisplayItemTile GetForwardTile()
+    {
+        Vector2Int pos = myTile.gridPos + GetForward();
+        return DataItemWorld.main.GetTile(pos.x, pos.y, true);
     }
     public void MoveForward()
     {

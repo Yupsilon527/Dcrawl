@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerMob : Mob
 {
     public static PlayerMob main;
+    public PlayerSenseComponent sense;
     protected override void Awake()
     {
-        base.Awake();
         main = this;
+        base.Awake();
+        if (sense == null)
+            sense = GetComponent<PlayerSenseComponent>();
     }
 }

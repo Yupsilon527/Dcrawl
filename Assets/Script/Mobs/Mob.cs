@@ -8,6 +8,9 @@ public class Mob : MonoBehaviour
     public Animator animator;
     public AudioSource audio;
 
+    public AudioClip monsterCall;
+
+
     protected virtual void Awake()
     {
         movement = GetComponent<Movement>();

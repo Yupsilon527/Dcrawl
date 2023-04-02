@@ -14,13 +14,7 @@ public class DisplayItemTile : MonoBehaviour
     {
         this.gridPos =worldPos;
         this.data = data;
-       // ReviseEntity();
     }
-    /*void ReviseEntity()
-    {
-        if (data.LocatedEntity != null)
-            data.LocatedEntity.movement.MoveToPosition(worldPos, 0, false);
-    }*/
     #region Visibility
 
     /*public bool IsVisible()
@@ -50,8 +44,8 @@ public class DisplayItemTile : MonoBehaviour
 
 
     #region entity
-    /*public EntityBase LocatedEntity;
-    public bool CanFitEntity(EntityBase e)
+    public Mob LocatedEntity;
+    /*public bool CanFitEntity(EntityBase e)
     {
         if (!IsPassible())
             return false;

@@ -11,7 +11,8 @@ public class ObjectPool : MonoBehaviour
     {
         foreach (Transform child in inactiveObjs)
         {
-            if (!child.gameObject.activeSelf && Prefab.name == child.name.Substring(0, Prefab.name.Length))
+            if (!child.gameObject.activeSelf && child.name.Length >= Prefab.name.Length 
+                && Prefab.name == child.name.Substring(0, Prefab.name.Length))
             {
                 ActivateObject(child.gameObject);
                 return child.gameObject;

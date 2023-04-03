@@ -219,6 +219,10 @@ MonoBehaviour:
   animator: {fileID: 0}
   audio: {fileID: 7838038703135044375}
   monsterCall: {fileID: 0}
+  MoveAP: 0
+  WaitAP: 0
+  TurnAP: 0
+  ActionAP: 0
   sense: {fileID: 0}
 --- !u!82 &7838038703135044375
 AudioSource:

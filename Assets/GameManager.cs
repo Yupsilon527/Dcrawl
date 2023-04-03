@@ -29,7 +29,11 @@ public class GameManager : MonoBehaviour
         enemies.Remove(other);
     }
     int cTurn = 0;
-    public int ActionPointsPerTurn = 10;
+    private void FixedUpdate()
+    {
+        ForwardTurn(1);
+    }
+    public int ActionPointsPerTurn = 30;
     public void ForwardTurn(int ap)
     {
         cTurn += ap;

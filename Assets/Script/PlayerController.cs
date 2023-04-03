@@ -7,30 +7,47 @@ public class PlayerController : MonoBehaviour
     public void MovePlayerForward()
     {
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
-        PlayerMob.main.movement.MoveForward();
+        {
+              if (PlayerMob.main.movement.MoveForward())
+            {
+                GameManager.main.ForwardTurn(PlayerMob.main.MoveAP);
+            }
+        }
     }
     public void TurnaPlayerRight()
     {
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
+        {
             PlayerMob.main.movement.Turn(true);
+            GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
+        }
     }
     public void TurnaPlayerLeft()
     {
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
+        {
             PlayerMob.main.movement.Turn(false);
+            GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
+        }
     }
     public void HandleWait()
     {
-        //TODO
+        GameManager.main.ForwardTurn(PlayerMob.main.WaitAP);
     }
     public void HandleTouch()
     {
         if (PlayerMob.main != null && PlayerMob.main.sense != null)
+        {
             PlayerMob.main.sense.HandlePlayerTouch();
+            GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
+        }
     }
     public void HandleEcho()
     {
         if (PlayerMob.main != null && PlayerMob.main.sense != null)
+        {
             PlayerMob.main.sense.HandlePlayerEcho();
+            GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
+        }
     }
 }

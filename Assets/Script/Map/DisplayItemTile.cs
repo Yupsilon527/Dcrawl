@@ -15,80 +15,35 @@ public class DisplayItemTile : MonoBehaviour
         this.gridPos =worldPos;
         this.data = data;
     }
-    #region Visibility
-
-    /*public bool IsVisible()
-    {
-        return worldPos.DistanceFrom(EntityPlayer.main.movement.gridPos, DataItemMap.main.GetFullSize()) <= WorldDefines.PlayerLos;
-
-    }*/
-    public void ChangeVisibility(bool value)
-    {
-        mesh.SetActive(value);
-    }
-
-    #endregion
 
     public DisplayItemTile[] neighbors;
     public void InitNeighbors(bool real)
     {
-        Vector2Int axial = gridPos;
+        Vector2Int coords = gridPos;
         neighbors = new DisplayItemTile[]
         {
-            DataItemWorld.main.GetTile(axial.x + 1,axial.y,real),
-        DataItemWorld.main.GetTile(axial.x - 1, axial.y ,real),
-        DataItemWorld.main.GetTile(axial.x, axial.y + 1,real),
-            DataItemWorld.main.GetTile(axial.x ,axial.y - 1,real),
+            DataItemWorld.main.GetTile(coords.x + 1,coords.y,real),
+        DataItemWorld.main.GetTile(coords.x - 1, coords.y ,real),
+        DataItemWorld.main.GetTile(coords.x, coords.y + 1,real),
+            DataItemWorld.main.GetTile(coords.x ,coords.y - 1,real),
         };
     }
 
 
     #region entity
     public Mob LocatedEntity;
-    /*public bool CanFitEntity(EntityBase e)
-    {
-        if (!IsPassible())
-            return false;
-        if (e != null)
-            switch (e.GetEntitySize())
-            {
-                case EntityBase.EntitySize.small:
-                    return EntityCheck(e);
-                case EntityBase.EntitySize.medium:
-                    bool passible = EntityCheck(e);
-                    if (passible && (!neighbors[0].IsPassible() || !neighbors[0].EntityCheck(e)))
-                    {
-                        passible = false;
-                    }
-                    if (passible && (!neighbors[1].IsPassible() || !neighbors[1].EntityCheck(e)))
-                    {
-                        passible = false;
-                    }
-                    return passible;
-                case EntityBase.EntitySize.large:
-                    passible = EntityCheck(e);
-                    if (passible)
-                    {
-                        foreach (var n in neighbors)
-                        {
-                            if (!n.IsPassible() || !n.EntityCheck(e))
-                            {
-                                passible = false;
-                                break;
-                            }
-                        }
-                    }
-                    return passible;
-            }
-        return IsPassible() && EntityCheck(e);
-    }
-    public bool EntityCheck(EntityBase e)
-    {
-        return LocatedEntity == null || LocatedEntity == e;
-    }*/
     public bool IsPassible()
     {
         return !data.Solid;
     }
     #endregion
+    public bool IsAdjecent(DisplayItemTile other)
+    {
+        return (other.gridPos.x - gridPos.x == 0 && Mathf.Abs(other.gridPos.y - gridPos.y) == 1) || (other.gridPos.y - gridPos.y == 0 && Mathf.Abs(other.gridPos.x - gridPos.x) == 1);
+    }
+    public int DistanceSquared(DisplayItemTile other)
+    {
+        Vector2Int delta = gridPos - other.gridPos;
+        return delta.sqrMagnitude;
+    }
 }

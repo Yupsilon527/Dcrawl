@@ -37,34 +37,65 @@ public class Movement : BaseComponent
     {
         return GetForward(facing);
     }
-    public void MoveDirection(Direction dir)
+    public bool MoveDirection(Direction dir)
     {
         Vector2Int pos = myTile.gridPos + GetForward(dir);
-        DisplayItemTile nTile = GetForwardTile();
+        return  Move (DataItemWorld.main.GetTile(pos.x, pos.y, true));
+        
+    }
+    public bool Move(DisplayItemTile nTile) {
         if (nTile != null)
         {
 
-            if (nTile.data.Solid)
+            if (!nTile.IsPassible())
             {
                 if (parent.audio != null && wallbumpSound != null)
                     parent.audio.PlayOneShot(wallbumpSound);
             }
-                else
+            else if (nTile.LocatedEntity != null)
+            {
+                if (parent == PlayerMob.main)
+                {
+                    nTile.LocatedEntity.OnPlayerTouch();
+                }
+                if (nTile.LocatedEntity == PlayerMob.main)
+                {
+                    parent.OnPlayerTouch();
+                }
+            }
+            else
             {
                 if (parent.audio != null && footstepSound != null)
                     parent.audio.PlayOneShot(footstepSound);
                 ChangeTile(nTile);
-                   }
+                return true;
+            }
         }
+        return false;
     }
     public DisplayItemTile GetForwardTile()
     {
         Vector2Int pos = myTile.gridPos + GetForward();
         return DataItemWorld.main.GetTile(pos.x, pos.y, true);
     }
-    public void MoveForward()
+    public bool MoveForward()
     {
-        MoveDirection(facing);
+        return MoveDirection(facing);
+    }
+    public bool Strafe(bool Right)
+    {
+        switch (facing)
+        {
+            case Direction.North:
+                return MoveDirection(Right ? Direction.East : Direction.West);
+            case Direction.South:
+                return MoveDirection(Right ? Direction.West : Direction.East);
+            case Direction.East:
+                return MoveDirection(Right ? Direction.South : Direction.North);
+            case Direction.West:
+                return MoveDirection(Right ? Direction.North : Direction.South);
+        }
+        return false;
     }
     public void ChangeDirection(Direction ndir)
     {
@@ -95,8 +126,11 @@ public class Movement : BaseComponent
     public DisplayItemTile myTile;
     void ChangeTile(DisplayItemTile nTile)
     {
+        if (myTile != null)
+            myTile.LocatedEntity = null;
         myTile = nTile;
         SnapToTile(nTile);
+        nTile.LocatedEntity = parent;
     }
     public override void OnSpawn()
     {
@@ -110,7 +144,7 @@ public class Movement : BaseComponent
     {
         if (myTile != null)
         {
-            SnapToTile(myTile);
+            ChangeTile(myTile);
         }
     }
     public void SnapToTile(DisplayItemTile nTile)

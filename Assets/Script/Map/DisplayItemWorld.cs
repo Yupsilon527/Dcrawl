@@ -99,7 +99,7 @@ public class DisplayItemWorld : MonoBehaviour
 
         tile.name = tile.data.tilePrefab.name + " " + tile.gridPos + "~" + worldPos;
 
-        Vector2 bidipos = DataItemWorld.TranslatePosition(worldPos);
+        Vector2 bidipos = worldPos;
 
         tile.transform.position = new Vector3(bidipos.x, bidipos.y, 0);
     }

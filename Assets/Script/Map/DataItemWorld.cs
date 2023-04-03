@@ -34,16 +34,12 @@ public class DataItemWorld : MonoBehaviour
         tile.gridPos = new Vector2Int(iX, iY);
 
         tile.name = tile.data.tilePrefab.name + " " + tile.gridPos;
-        Vector2 bidipos = DataItemWorld.TranslatePosition(tile.gridPos);
+        Vector2 bidipos = tile.gridPos;
         tile.transform.position = new Vector3(bidipos.x, 0, bidipos.y);
     }
     #endregion
-    #region Translate
-    public static Vector2 TranslatePosition(Vector2Int pos)
-    {
-        return pos;
 
-    }
+    #region Translate
     public Vector2Int TranslateCoordinate(Vector2 point)
     {
         return Vector2Int.RoundToInt(point);

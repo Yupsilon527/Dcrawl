@@ -17,12 +17,22 @@ public class Mob : MonoBehaviour
         animator = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
     }
-    private void Start()
+    protected virtual void Start()
     {
         foreach (BaseComponent c in GetComponents<BaseComponent>())
         {
             c.OnSpawn();
         }
+    }
+    public virtual void OnPlayerEcho()
+    {
+        if (audio != null && monsterCall != null)
+            audio.PlayOneShot(monsterCall);
+        Debug.Log($"Player shouts at {name}");
+    }
+    public virtual void OnPlayerTouch()
+    {
+        Debug.Log($"Player touches at {name}");
     }
     public virtual bool SanityCheck()
     {

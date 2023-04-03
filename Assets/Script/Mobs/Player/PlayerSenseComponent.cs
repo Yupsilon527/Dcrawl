@@ -11,12 +11,12 @@ public class PlayerSenseComponent : BaseComponent
         DisplayItemTile forwardTile = parent.movement.GetForwardTile();
         if (forwardTile != null)
         {
-            if (forwardTile.LocatedEntity!=null && forwardTile.LocatedEntity.monsterCall!=null)
-                parent.audio.PlayOneShot(forwardTile.LocatedEntity.monsterCall);
-            if (forwardTile.IsPassible() && emptyTileSound !=null)
-                parent.audio.PlayOneShot(emptyTileSound);
-            else if (solidTileSound != null)
+            if (!forwardTile.IsPassible() && solidTileSound != null)
                 parent.audio.PlayOneShot(solidTileSound);
+            else if (forwardTile.LocatedEntity != null)
+                forwardTile.LocatedEntity.OnPlayerTouch();
+            else if (emptyTileSound != null)
+                parent.audio.PlayOneShot(emptyTileSound);
         }
     }
     public GameObject SoundParticle;
@@ -44,6 +44,7 @@ public class PlayerSenseComponent : BaseComponent
                 if (dit.LocatedEntity != null && CuriosityParticle != null)
                 {
                     Effect = GameManager.main.effectPool.PoolItem(CuriosityParticle);
+                    dit.LocatedEntity.OnPlayerEcho();
                 }
                 else if (dit.IsPassible() && SoundParticle != null)
                 {
@@ -62,5 +63,10 @@ public class PlayerSenseComponent : BaseComponent
                 break;
             }
         }
+        EchoCoroutine = null;
+    }
+    public bool IsIdle()
+    {
+        return EchoCoroutine == null;
     }
 }

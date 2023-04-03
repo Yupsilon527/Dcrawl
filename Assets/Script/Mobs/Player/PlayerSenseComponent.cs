@@ -17,6 +17,7 @@ public class PlayerSenseComponent : BaseComponent
                 forwardTile.LocatedEntity.OnPlayerTouch();
             else if (emptyTileSound != null)
                 parent.audio.PlayOneShot(emptyTileSound);
+            GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         }
     }
     public GameObject SoundParticle;
@@ -63,6 +64,7 @@ public class PlayerSenseComponent : BaseComponent
                 break;
             }
         }
+        GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         EchoCoroutine = null;
     }
     public bool IsIdle()

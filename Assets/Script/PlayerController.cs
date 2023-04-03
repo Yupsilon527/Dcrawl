@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
         if (PlayerMob.main != null && PlayerMob.main.sense != null)
         {
             PlayerMob.main.sense.HandlePlayerTouch();
-            GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         }
     }
     public void HandleEcho()
@@ -47,7 +46,6 @@ public class PlayerController : MonoBehaviour
         if (PlayerMob.main != null && PlayerMob.main.sense != null)
         {
             PlayerMob.main.sense.HandlePlayerEcho();
-            GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         }
     }
 }

@@ -62,35 +62,9 @@ public class DisplayItemWorld : MonoBehaviour
         tilepool.DeactivateObject(tile.gameObject);
     }
     #endregion
-    #region World Center and Visbility
-    Vector2Int VisibleWorldCenter;
-    /*public void AdjustVisibleTiles()
-    {
-        VisibleWorldCenter = EntityPlayer.main.movement.gridPos.AxialCoords;
-        if (TilesetData == null)
-        {
-            GenerateWorldAroundPoint(VisibleWorldCenter, WorldDefines.PlayerLos);
-        }
-        foreach (DisplayItemTile tile in TilesetData)
-        {
-            tile.ChangeVisibility(tile.IsVisible());
-        }
-    }*/
-    public Vector2Int GetVisibleWorldCenter()
-    {
-        return worldCenter + new Vector2Int(Mathf.FloorToInt(TilesetData.GetLength(0) / 2), Mathf.FloorToInt(TilesetData.GetLength(1) / 2));
-    }
-    #endregion
+    
     #region Move And Register Tiles
-    /*public void MoveTile(Vector2Int start, Vector2Int end)
-    {
-        tilepool.DeactivateObject(TilesetData[end.x, end.y].gameObject);
-
-        RoomTile movedTile = TilesetData[start.x, start.y];
-
-        movedTile.gridPos = end;
-        RegisterTile(movedTile);
-    }*/
+    
     public void RegisterTile(DisplayItemTile tile, Vector2Int worldPos)
     {
         Vector2Int realPos = new Vector2Int(worldPos.x - worldCenter.x, worldPos.y - worldCenter.y);

@@ -39,7 +39,7 @@ public class AiComponent : BaseComponent
             DisplayItemTile tile = null;
             foreach (DisplayItemTile n in parent.movement.myTile.neighbors)
             {
-                if (tile == null || tile.DistanceSquared(playerPos) > n.DistanceSquared(playerPos))
+                if (n.IsPassible() && (tile == null || tile.DistanceSquared(playerPos) > n.DistanceSquared(playerPos)))
                 {
                     tile = n;
                 }

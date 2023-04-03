@@ -7,6 +7,7 @@ public class RoomInitializer : MonoBehaviour
     private void Start()
     {
         ScanTiles();
+        DataItemWorld.main.FinalizeWorld();
     }
 
     Vector2Int mins = Vector2Int.zero;

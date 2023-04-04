@@ -4893,7 +4893,7 @@ Transform:
   m_GameObject: {fileID: 1278158143}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.25, z: 1}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.33333334, y: 0.6666667, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2739647066059456406}
@@ -4914,7 +4914,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278158143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9908,6 +9908,7 @@ Transform:
   - {fileID: 2739647065591249393}
   - {fileID: 1278158144}
   - {fileID: 497067077}
+  - {fileID: 5424797516141984358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9988,8 +9989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 2739647066059456400}
-  footstepSound: {fileID: 8300000, guid: ea842d3a1eaa01340bd1703a093be3b2, type: 3}
-  wallbumpSound: {fileID: 8300000, guid: 7242958101d36ad42a21d288078301df, type: 3}
+  footstepSound: {fileID: 8300000, guid: 7d42f51a33c67ae4bbaa4109fb140f80, type: 3}
+  wallbumpSound: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
   DefaultWalkSpeed: 0.66
   DefaultTurnSpeed: 0.33
   myTile: {fileID: 0}
@@ -10007,7 +10008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 0}
   audio: {fileID: 7838038703135044375}
-  monsterCall: {fileID: 0}
+  monsterCall: {fileID: 8300000, guid: 4726669868a286844b28b0b578379802, type: 3}
   noiseParticle: {fileID: 0}
   MoveAP: 0
   WaitAP: 0
@@ -10023,9 +10024,9 @@ AudioSource:
   m_GameObject: {fileID: 2739647066059456394}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10123,8 +10124,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
-  emptyTileSound: {fileID: 8300000, guid: ea842d3a1eaa01340bd1703a093be3b2, type: 3}
-  solidTileSound: {fileID: 8300000, guid: 6c9d94b331508cd48aba93dcc5b41184, type: 3}
+  emptyTileSound: {fileID: 8300000, guid: d7d0c0000b61e244daa1d7fbd511a8f3, type: 3}
+  solidTileSound: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
+  EchoSound: {fileID: 8300000, guid: 4726669868a286844b28b0b578379802, type: 3}
+  mixerGroup: {fileID: 2927092927507583616, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
   SoundParticle: {fileID: 9109303407789349486, guid: f2fdb4423d91a1e4a86d1534c71bece9, type: 3}
   CuriosityParticle: {fileID: 2564265579650242637, guid: a22eb188c8ee3f64d905231dacf491c3, type: 3}
   ParticleInterval: 0.1
@@ -10133,3 +10136,61 @@ MonoBehaviour:
   FrontWallParticle: {fileID: 4771257419569188338}
   FrontHollow: {fileID: 0}
   FrontHollowParticle: {fileID: 6052829355233890924}
+--- !u!1001 &8562105370085826200
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2739647066059456406}
+    m_Modifications:
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109303407789349486, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+      propertyPath: m_Name
+      value: Footsplash Particle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+--- !u!4 &5424797516141984358 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
+  m_PrefabInstance: {fileID: 8562105370085826200}
+  m_PrefabAsset: {fileID: 0}

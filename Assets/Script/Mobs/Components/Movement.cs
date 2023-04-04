@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Movement : BaseComponent
 {
     public AudioClip footstepSound;
     public AudioClip wallbumpSound;
     public float DefaultWalkSpeed = 1;
+    
+
+    private AudioSource audioSource;
     #region Facing
     public enum Direction
     {

@@ -135,7 +135,7 @@ MonoBehaviour:
   parent: {fileID: 7512221933196274831}
   footstepSound: {fileID: 0}
   wallbumpSound: {fileID: 0}
-  DefaultWalkSpeed: 0.1
+  DefaultWalkSpeed: 0.5
   DefaultTurnSpeed: 0.25
   myTile: {fileID: 0}
 --- !u!114 &2708538036478331182

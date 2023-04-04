@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
             {
                 GameManager.main.ForwardTurn(PlayerMob.main.MoveAP);
             }
+            else
+            {
+                PlayerMob.main.sense.DrawTouchEffect();
+            }
         }
     }
     public void TurnaPlayerRight()

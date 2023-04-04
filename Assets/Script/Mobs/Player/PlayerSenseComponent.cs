@@ -25,8 +25,7 @@ public class PlayerSenseComponent : BaseComponent
         {
             if (!forwardTile.IsPassible())
             {
-                if (FrontWallParticle != null)
-                    FrontWallParticle.Play();
+                DrawTouchEffect();
                 if (solidTileSound != null)
                 parent.audio.PlayOneShot(solidTileSound);
             }
@@ -36,6 +35,11 @@ public class PlayerSenseComponent : BaseComponent
                 parent.audio.PlayOneShot(emptyTileSound);
             GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         }
+    }
+    public void DrawTouchEffect()
+    {
+        if (FrontWallParticle != null)
+            FrontWallParticle.Play();
     }
     public GameObject SoundParticle;
     public GameObject CuriosityParticle;

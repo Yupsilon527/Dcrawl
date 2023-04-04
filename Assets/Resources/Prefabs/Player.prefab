@@ -4848,13 +4848,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 0003040508
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -4893,7 +4893,7 @@ Transform:
   m_GameObject: {fileID: 1278158143}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.25, z: 1}
-  m_LocalScale: {x: 0.33333334, y: 0.6666667, z: 0.33333334}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2739647066059456406}
@@ -4914,7 +4914,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278158143}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5201,7 +5201,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 6
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5254,7 +5254,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5307,7 +5307,7 @@ ParticleSystem:
     startSizeZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9908,7 +9908,6 @@ Transform:
   - {fileID: 2739647065591249393}
   - {fileID: 1278158144}
   - {fileID: 497067077}
-  - {fileID: 5424797516141984358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9991,8 +9990,8 @@ MonoBehaviour:
   parent: {fileID: 2739647066059456400}
   footstepSound: {fileID: 8300000, guid: 7d42f51a33c67ae4bbaa4109fb140f80, type: 3}
   wallbumpSound: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
-  DefaultWalkSpeed: 0.66
-  DefaultTurnSpeed: 0.33
+  DefaultWalkSpeed: 0.75
+  DefaultTurnSpeed: 0.4
   myTile: {fileID: 0}
 --- !u!114 &2739647066059456400
 MonoBehaviour:
@@ -10136,61 +10135,3 @@ MonoBehaviour:
   FrontWallParticle: {fileID: 4771257419569188338}
   FrontHollow: {fileID: 0}
   FrontHollowParticle: {fileID: 6052829355233890924}
---- !u!1001 &8562105370085826200
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2739647066059456406}
-    m_Modifications:
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9109303407789349486, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-      propertyPath: m_Name
-      value: Footsplash Particle
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f2c9543fff35fb740947de106eccf367, type: 3}
---- !u!4 &5424797516141984358 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4438989992919721214, guid: f2c9543fff35fb740947de106eccf367, type: 3}
-  m_PrefabInstance: {fileID: 8562105370085826200}
-  m_PrefabAsset: {fileID: 0}

@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerSenseComponent : BaseComponent
 {
     public AudioClip emptyTileSound;
     public AudioClip solidTileSound;
+    public AudioClip EchoSound;
+
+    public AudioMixerGroup mixerGroup; // assign your AudioMixerGroup in the inspector
+
+    private AudioSource EchoSounds;
+
     private void Start()
     {
         HandlePlayerSight();
+        EchoSounds = GetComponent<AudioSource>();
     }
     public void HandlePlayerTouch()
     {
@@ -37,6 +45,7 @@ public class PlayerSenseComponent : BaseComponent
     {
         Vector2Int startPos = parent.movement.myTile.gridPos;
         Vector2Int dir = parent.movement.GetForward();
+        EchoSounds.PlayOneShot(EchoSound);
 
         if (EchoCoroutine == null)
             StartCoroutine(EchoEffect(startPos,dir));

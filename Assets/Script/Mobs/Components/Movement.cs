@@ -7,6 +7,7 @@ public class Movement : BaseComponent
     public AudioClip footstepSound;
     public AudioClip wallbumpSound;
     public float DefaultWalkSpeed = 1;
+    public float DefaultTurnSpeed = .25f;
     #region Facing
     public enum Direction
     {

@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
         {
-            PlayerMob.main.movement.Turn(true,.5f);
+            PlayerMob.main.movement.Turn(true, PlayerMob.main.movement.DefaultTurnSpeed);
             GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
         }
     }
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
         {
-            PlayerMob.main.movement.Turn(false, .5f);
+            PlayerMob.main.movement.Turn(false, PlayerMob.main.movement.DefaultTurnSpeed);
             GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
         }
     }

@@ -21,7 +21,6 @@ public class Mob : MonoBehaviour
         {
             c.OnSpawn();
         }
-        PostMove();
     }
     public virtual void OnPlayerEcho()
     {

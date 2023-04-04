@@ -71,5 +71,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall Tile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8480766239882972096, guid: b223b0e9b6ae3774f93bcf78adcb0bd9, type: 3}
+    - {fileID: 6172920043486494836, guid: b223b0e9b6ae3774f93bcf78adcb0bd9, type: 3}
+    - {fileID: 6552030091328402187, guid: b223b0e9b6ae3774f93bcf78adcb0bd9, type: 3}
+    - {fileID: 1554646891550384064, guid: b223b0e9b6ae3774f93bcf78adcb0bd9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b223b0e9b6ae3774f93bcf78adcb0bd9, type: 3}

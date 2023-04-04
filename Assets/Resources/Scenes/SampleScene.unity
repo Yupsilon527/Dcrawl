@@ -4825,14 +4825,34 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 491365784122094299, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
+      propertyPath: emptyTileSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d42f51a33c67ae4bbaa4109fb140f80, type: 3}
+    - target: {fileID: 491365784122094299, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
+      propertyPath: solidTileSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
     - target: {fileID: 2739647066059456394, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2739647066059456400, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
+      propertyPath: monsterCall
+      value: 
+      objectReference: {fileID: 8300000, guid: 4726669868a286844b28b0b578379802, type: 3}
     - target: {fileID: 2739647066059456401, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
       propertyPath: myTile
       value: 
       objectReference: {fileID: 1834505710}
+    - target: {fileID: 2739647066059456401, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d42f51a33c67ae4bbaa4109fb140f80, type: 3}
+    - target: {fileID: 2739647066059456401, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
+      propertyPath: wallbumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
     - target: {fileID: 2739647066059456406, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4959,6 +4979,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 797600660}
+    - target: {fileID: 2708538036478331601, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2708538036478331606, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5003,5 +5027,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7512221933196274831, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
+      propertyPath: monsterCall
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cbb26f2d9415474eaa3c4265b2d7e56, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}

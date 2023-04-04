@@ -5,16 +5,14 @@ using UnityEngine;
 public class Mob : MonoBehaviour
 {
     public Movement movement;
-    public Animator animator;
     public AudioSource audio;
 
     public AudioClip monsterCall;
-
+    public ParticleSystem noiseParticle;
 
     protected virtual void Awake()
     {
         movement = GetComponent<Movement>();
-        animator = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
     }
     protected virtual void Start()
@@ -23,6 +21,7 @@ public class Mob : MonoBehaviour
         {
             c.OnSpawn();
         }
+        PostMove();
     }
     public virtual void OnPlayerEcho()
     {
@@ -33,6 +32,11 @@ public class Mob : MonoBehaviour
     public virtual void OnPlayerTouch()
     {
         Debug.Log($"Player touches at {name}");
+    }
+    public virtual void PostMove()
+    {
+        if (noiseParticle != null)
+            noiseParticle.Play();
     }
     public virtual bool SanityCheck()
     {

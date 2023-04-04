@@ -6,6 +6,7 @@ public class Movement : BaseComponent
 {
     public AudioClip footstepSound;
     public AudioClip wallbumpSound;
+    public float DefaultWalkSpeed = 1;
     #region Facing
     public enum Direction
     {
@@ -37,13 +38,13 @@ public class Movement : BaseComponent
     {
         return GetForward(facing);
     }
-    public bool MoveDirection(Direction dir)
+    public bool MoveDirection(Direction dir, float dur)
     {
         Vector2Int pos = myTile.gridPos + GetForward(dir);
-        return  Move (DataItemWorld.main.GetTile(pos.x, pos.y, true));
+        return  Move (DataItemWorld.main.GetTile(pos.x, pos.y, true), dur);
         
     }
-    public bool Move(DisplayItemTile nTile) {
+    public bool Move(DisplayItemTile nTile, float dur) {
         if (nTile != null)
         {
 
@@ -67,7 +68,7 @@ public class Movement : BaseComponent
             {
                 if (parent.audio != null && footstepSound != null)
                     parent.audio.PlayOneShot(footstepSound);
-                ChangeTile(nTile);
+                ChangeTile(nTile, dur);
                 return true;
             }
         }
@@ -80,27 +81,69 @@ public class Movement : BaseComponent
     }
     public bool MoveForward()
     {
-        return MoveDirection(facing);
+        return MoveDirection(facing, DefaultWalkSpeed);
     }
-    public bool Strafe(bool Right)
+    public bool Strafe(bool Right, float dur)
     {
         switch (facing)
         {
             case Direction.North:
-                return MoveDirection(Right ? Direction.East : Direction.West);
+                return MoveDirection(Right ? Direction.East : Direction.West, dur);
             case Direction.South:
-                return MoveDirection(Right ? Direction.West : Direction.East);
+                return MoveDirection(Right ? Direction.West : Direction.East, dur);
             case Direction.East:
-                return MoveDirection(Right ? Direction.South : Direction.North);
+                return MoveDirection(Right ? Direction.South : Direction.North, dur);
             case Direction.West:
-                return MoveDirection(Right ? Direction.North : Direction.South);
+                return MoveDirection(Right ? Direction.North : Direction.South, dur);
         }
         return false;
     }
     public void ChangeDirection(Direction ndir)
     {
         facing = ndir;
-        transform.forward = new Vector3(GetForward().x,0, GetForward().y);
+        transform.forward = new Vector3(GetForward().x, 0, GetForward().y);
+        parent.PostMove();
+    }
+    public void ChangeDirection(Direction ndir, float time)
+    {
+        facing = ndir;
+        if (MoveCoroutine != null)
+            StopCoroutine(MoveCoroutine);
+        MoveCoroutine = StartCoroutine(TurnCoroutine(new Vector3(GetForward().x, 0, GetForward().y), time));
+        //transform.forward = new Vector3(GetForward().x, 0, GetForward().y);
+    }
+    IEnumerator TurnCoroutine(Vector3 nForward, float dur)
+    {
+        Vector3 startPos = transform.forward;
+        Vector3 endPos = nForward;
+
+        float startTime = Time.time;
+        for (float t = startTime; t < startTime + dur; t += Time.deltaTime)
+        {
+            transform.forward = Vector3.Lerp(startPos, endPos, (Time.time - startTime) / dur);
+            yield return new WaitForEndOfFrame();
+        }
+        transform.forward  = endPos;
+        parent.PostMove();
+        MoveCoroutine = null;
+    }
+    public void Turn(bool Right,float dur)
+    {
+        switch (facing)
+        {
+            case Direction.North:
+                ChangeDirection(Right ? Direction.East : Direction.West, dur);
+                break;
+            case Direction.South:
+                ChangeDirection(Right ? Direction.West : Direction.East, dur);
+                break;
+            case Direction.East:
+                ChangeDirection(Right ? Direction.South : Direction.North, dur);
+                break;
+            case Direction.West:
+                ChangeDirection(Right ? Direction.North : Direction.South, dur);
+                break;
+        }
     }
     public void Turn(bool Right)
     {
@@ -130,6 +173,14 @@ public class Movement : BaseComponent
             myTile.LocatedEntity = null;
         myTile = nTile;
         SnapToTile(nTile);
+        nTile.LocatedEntity = parent;
+    }
+    void ChangeTile(DisplayItemTile nTile, float dur)
+    {
+        if (myTile != null)
+            myTile.LocatedEntity = null;
+        myTile = nTile;
+        MoveToTile(nTile, dur);
         nTile.LocatedEntity = parent;
     }
     public override void OnSpawn()
@@ -162,6 +213,7 @@ public class Movement : BaseComponent
     public void SnapToPosition(Vector3 nPos)
     {
         transform.position = nPos;
+        parent.PostMove();
     }
     public void MoveToPosition(Vector3 nPos, float dur)
     {
@@ -187,7 +239,7 @@ public class Movement : BaseComponent
             transform.position = Vector3.Lerp(startPos, endPos, (Time.time - startTime) / dur);
             yield return new WaitForEndOfFrame();
         }
-        transform.position = endPos;
+        SnapToPosition( endPos);
         MoveCoroutine = null;
     }
 }

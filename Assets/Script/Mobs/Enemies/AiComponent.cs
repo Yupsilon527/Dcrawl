@@ -46,7 +46,7 @@ public class AiComponent : BaseComponent
             }
             if (tile != null)
             {
-                parent.movement.Move(tile);
+                parent.movement.Move(tile, parent.movement.DefaultWalkSpeed);
             }
         }
     }
@@ -67,7 +67,7 @@ public class AiComponent : BaseComponent
     {
         if (Random.Range(0, 100) <= behaviorData)
         {
-            parent.movement.MoveDirection((Movement.Direction)Mathf.FloorToInt(Random.Range(0, 5)));
+            parent.movement.MoveDirection((Movement.Direction)Mathf.FloorToInt(Random.Range(0, 5)), parent.movement.DefaultWalkSpeed);
         }
     }
 

@@ -118,6 +118,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   audio: {fileID: 8022538418081121879}
   monsterCall: {fileID: 0}
+  ai: {fileID: 0}
 --- !u!114 &2708538036478331601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +134,7 @@ MonoBehaviour:
   parent: {fileID: 7512221933196274831}
   footstepSound: {fileID: 8300000, guid: ea842d3a1eaa01340bd1703a093be3b2, type: 3}
   wallbumpSound: {fileID: 0}
+  DefaultWalkSpeed: 0.1
   myTile: {fileID: 0}
 --- !u!114 &2708538036478331182
 MonoBehaviour:
@@ -146,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f17f1d036383a34598f6ab971fe379c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
   behavior: 0
   behaviorData: 0
 --- !u!82 &8022538418081121879

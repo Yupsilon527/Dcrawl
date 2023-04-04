@@ -6,6 +6,10 @@ public class PlayerSenseComponent : BaseComponent
 {
     public AudioClip emptyTileSound;
     public AudioClip solidTileSound;
+    private void Start()
+    {
+        HandlePlayerSight();
+    }
     public void HandlePlayerTouch()
     {
         DisplayItemTile forwardTile = parent.movement.GetForwardTile();
@@ -46,6 +50,7 @@ public class PlayerSenseComponent : BaseComponent
                 {
                     Effect = GameManager.main.effectPool.PoolItem(CuriosityParticle);
                     dit.LocatedEntity.OnPlayerEcho();
+                    break;
                 }
                 else if (dit.IsPassible() && SoundParticle != null)
                 {
@@ -70,5 +75,25 @@ public class PlayerSenseComponent : BaseComponent
     public bool IsIdle()
     {
         return EchoCoroutine == null;
+    }
+    public GameObject FrontWall;
+    public ParticleSystem FrontWallParticle;
+    public GameObject FrontHollow;
+    public ParticleSystem FrontHollowParticle;
+    public void HandlePlayerSight()
+    {
+        DisplayItemTile forwardTile = parent.movement.GetForwardTile();
+        bool facesWall = (forwardTile != null && !forwardTile.IsPassible());
+        
+            if (FrontWallParticle != null && facesWall)
+                FrontWallParticle.Play();
+            if (FrontHollowParticle != null)
+        {
+            if (facesWall)
+                FrontHollowParticle.Stop();
+            else
+                FrontHollowParticle.Play();
+        }
+        
     }
 }

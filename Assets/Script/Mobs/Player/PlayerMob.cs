@@ -21,4 +21,10 @@ public class PlayerMob : Mob
     {
         return sense.IsIdle();
     }
+    public override void PostMove()
+    {
+        base.PostMove();
+        if (sense!=null)
+            sense.HandlePlayerSight();
+    }
 }

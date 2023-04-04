@@ -4,6 +4,37 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private void Update()
+    {
+        ReadKeyboard();
+    }
+    void ReadKeyboard()
+    {
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            MovePlayerForward();
+        }
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            TurnaPlayerLeft();
+        }
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            TurnaPlayerRight();
+        }
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            TurnaPlayerRight();
+        }
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            HandleEcho();
+        }
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+        {
+            HandleTouch();
+        }
+    }
     public void MovePlayerForward()
     {
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
@@ -18,7 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
         {
-            PlayerMob.main.movement.Turn(true);
+            PlayerMob.main.movement.Turn(true,.5f);
             GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
         }
     }
@@ -26,7 +57,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
         {
-            PlayerMob.main.movement.Turn(false);
+            PlayerMob.main.movement.Turn(false, .5f);
             GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
         }
     }

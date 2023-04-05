@@ -59,6 +59,7 @@ public class Resource
             values[0] = Mathf.Max(0, values[0]);
         }
         Debug.Log("[" + debugName + "] Change " + oldlife + " to " + values[0]);
+        UpdateHealthBar();
     }
 
     public void SetPercentage(float value)
@@ -126,5 +127,16 @@ public class Resource
     {
         Debug.Log("[" + debugName + "] Substract " + value );
         GiveValue(-Mathf.Min(GetValue(),value));
+    }
+
+    HealthbarController controller;
+    public void TieToHealthBar(HealthbarController healthBar)
+    {
+        controller = healthBar;
+        healthBar.AssignResource(this);
+    }
+    void UpdateHealthBar()
+    {
+        controller?.OnValueChange();
     }
 }

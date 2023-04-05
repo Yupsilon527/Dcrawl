@@ -19,7 +19,10 @@ public class EnemyMob : Mob
     public override void OnPlayerTouch()
     {
         base.OnPlayerTouch();
-        //start combat
+        if (CombatController.main!=null)
+        {
+            CombatController.main.InitialzieCombat(PlayerMob.main.damageable, damageable);
+        }
     }
     protected override void Start()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mob : MonoBehaviour
 {
     public Movement movement;
+    public FighterComponent damageable;
     public AudioSource audio;
 
     public AudioClip monsterCall;
@@ -13,6 +14,7 @@ public class Mob : MonoBehaviour
     protected virtual void Awake()
     {
         movement = GetComponent<Movement>();
+        damageable = GetComponent<FighterComponent>();
         audio = GetComponent<AudioSource>();
     }
     protected virtual void Start()
@@ -40,6 +42,10 @@ public class Mob : MonoBehaviour
     public virtual bool SanityCheck()
     {
         return (gameObject.activeSelf && gameObject.activeInHierarchy);
-
+    }
+    public virtual void Die()
+    {
+        movement.myTile.LocatedEntity = null;
+        gameObject.SetActive(false);
     }
 }

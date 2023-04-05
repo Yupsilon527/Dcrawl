@@ -17,6 +17,14 @@ public class PlayerMob : Mob
         if (sense == null)
             sense = GetComponent<PlayerSenseComponent>();
     }
+    protected override void Start()
+    {
+        base.Start();
+        if (damageable!=null && GameInterface.main!=null && GameInterface.main.playerHealth!=null)
+        {
+            damageable.Life.TieToHealthBar(GameInterface.main.playerHealth);
+        }
+    }
     public bool CanAct()
     {
         return sense.IsIdle();

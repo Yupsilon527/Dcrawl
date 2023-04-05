@@ -106,16 +106,20 @@ public class Movement : BaseComponent
         transform.forward = new Vector3(GetForward().x, 0, GetForward().y);
         parent.PostMove();
     }
+    Coroutine turnCoroutine;
     public void ChangeDirection(Direction ndir, float time)
     {
         facing = ndir;
-        if (MoveCoroutine != null)
-            StopCoroutine(MoveCoroutine);
-        MoveCoroutine = StartCoroutine(TurnCoroutine(new Vector3(GetForward().x, 0, GetForward().y), time));
+        if (turnCoroutine != null)
+        {
+            StopCoroutine(turnCoroutine);
+        }
+        turnCoroutine = StartCoroutine(TurnCoroutine(new Vector3(GetForward().x, 0, GetForward().y), time));
         //transform.forward = new Vector3(GetForward().x, 0, GetForward().y);
     }
     IEnumerator TurnCoroutine(Vector3 nForward, float dur)
     {
+        
         Vector3 startPos = transform.forward;
         Vector3 endPos = nForward;
 
@@ -127,7 +131,7 @@ public class Movement : BaseComponent
         }
         transform.forward  = endPos;
         parent.PostMove();
-        MoveCoroutine = null;
+        turnCoroutine = null;
     }
     public void Turn(bool Right,float dur)
     {
@@ -220,13 +224,17 @@ public class Movement : BaseComponent
     public void MoveToPosition(Vector3 nPos, float dur)
     {
         if (MoveCoroutine != null)
+        {
             StopCoroutine(MoveCoroutine);
+        }
         MoveCoroutine = StartCoroutine(SlideCoroutine(nPos, dur));
     }
     public void MoveToPositionLinear(Vector3 nPos, float speed)
     {
         if (MoveCoroutine != null)
+        {
             StopCoroutine(MoveCoroutine);
+        }
         MoveCoroutine = StartCoroutine(SlideCoroutine(nPos, (nPos - transform.position).magnitude / speed));
     }
     Coroutine MoveCoroutine;

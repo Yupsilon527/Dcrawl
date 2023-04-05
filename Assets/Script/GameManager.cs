@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public int ActionPointsPerTurn = 30;
     public void ForwardTurn(int ap)
     {
+        if (CombatController.main != null && CombatController.main.IsInCombat()) return;
         cTurn += ap;
         if (cTurn> ActionPointsPerTurn)
         { OnTurnEnd();

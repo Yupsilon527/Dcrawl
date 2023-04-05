@@ -50,7 +50,16 @@ public class CombatController : MonoBehaviour
         {
             if (!miss)
             {
-                monster.TakeDamage(playerattack.AttackValue);
+                float resultingDamage = monster.TakeDamage(playerattack.AttackValue); 
+                MessageManager.ShowMessage($"You hit the  {monster.Character.name} for {resultingDamage} damage!");
+                
+                if (playerattack.AbilitySound!=null)
+                PlayerMob.main.audio.PlayOneShot(playerattack.AbilitySound);
+            }
+            else
+            {
+
+                MessageManager.ShowMessage($"You missed!");
             }
             player.NumAttacks++;
         }
@@ -60,7 +69,14 @@ public class CombatController : MonoBehaviour
         ScriptableAttack monsterattack = monster.GetNextAttack();
         if (monsterattack != null )
         {
-            player.TakeDamage(monsterattack.AttackValue * monsterattack.AttackCount); 
+            float resultingDamage = 0;
+            for (int i = 0; i < monsterattack.AttackCount; i++)
+            {
+                resultingDamage += player.TakeDamage(monsterattack.AttackValue);
+            }
+            MessageManager.ShowMessage($"The {monster.Character.name} hits you for {resultingDamage} damage!");
+            if (monsterattack.AbilitySound != null)
+                PlayerMob.main.audio.PlayOneShot(monsterattack.AbilitySound);
         }
     }
     float lastUpdateTime = 0;

@@ -22,14 +22,18 @@ public class DamageableComponent : BaseComponent
         }
         return null;
     }
-    public void TakeDamage(float damage)
+    public float TakeDamage(float damage)
     {
         float defense = 0;
         if (GetNextAttack() != null)
             defense = GetNextAttack().DefenseValue;
 
-        if (damage - defense>0)
-        TakeRawDamage(damage-defense);
+        if (damage - defense > 0)
+        {
+            TakeRawDamage(damage - defense);
+            return damage - defense;
+        }
+        return 0;
     }
     public bool IsAlive()
     {

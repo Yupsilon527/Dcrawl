@@ -25,14 +25,21 @@ public class PlayerSenseComponent : BaseComponent
         {
             if (!forwardTile.IsPassible())
             {
+                MessageManager.ShowMessage("You feel a wall.");
                 DrawTouchEffect();
                 if (solidTileSound != null)
-                parent.audio.PlayOneShot(solidTileSound);
+                    parent.audio.PlayOneShot(solidTileSound);
             }
             else if (forwardTile.LocatedEntity != null)
+            {
+                MessageManager.ShowMessage($"You touch the {forwardTile.LocatedEntity.name}");
                 forwardTile.LocatedEntity.OnPlayerTouch();
+            }
             else if (emptyTileSound != null)
+            {
+                MessageManager.ShowMessage("You feel nothing.");
                 parent.audio.PlayOneShot(emptyTileSound);
+            }
             GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         }
     }
@@ -57,6 +64,7 @@ public class PlayerSenseComponent : BaseComponent
     Coroutine EchoCoroutine;
     IEnumerator EchoEffect(Vector2Int startPos, Vector2Int dir)
     {
+        MessageManager.ShowMessage("You call out...");
         Vector2Int cTile = startPos + dir;
         bool intrerupted = false;
         for (int i = 1; i < EchoRange && !intrerupted; i++)

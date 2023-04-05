@@ -62,10 +62,12 @@ public class Movement : BaseComponent
             {
                 if (parent == PlayerMob.main)
                 {
+                    MessageManager.ShowMessage($"You bump into the {parent.damageable.Character.name}!");
                     nTile.LocatedEntity.OnPlayerTouch();
                 }
                 if (nTile.LocatedEntity == PlayerMob.main)
                 {
+                    MessageManager.ShowMessage($"The {parent.damageable.Character.name} attacks you!");
                     parent.OnPlayerTouch();
                 }
             }

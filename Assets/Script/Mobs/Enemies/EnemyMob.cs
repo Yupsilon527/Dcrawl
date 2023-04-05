@@ -15,6 +15,8 @@ public class EnemyMob : Mob
     {
         base.OnPlayerEcho();
         ai.SetAggro(true);
+        if (damageable!=null && damageable.Character!=null)
+        MessageManager.ShowMessage($"The {damageable.Character.name} hears you...");
     }
     public override void OnPlayerTouch()
     {

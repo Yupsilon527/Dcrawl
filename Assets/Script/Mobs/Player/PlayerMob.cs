@@ -35,4 +35,9 @@ public class PlayerMob : Mob
         if (sense!=null)
             sense.HandlePlayerSight();
     }
+    public override void Die()
+    {
+        base.Die();
+        //TODO end game screen
+    }
 }

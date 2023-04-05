@@ -56,6 +56,7 @@ MonoBehaviour:
   playerInfo: {fileID: 2657827291351437631}
   enemyInfo: {fileID: 3571364871063286161}
   monsterTargetingComponent: {fileID: 9152087570143333052}
+  playerActionsComponent: {fileID: 9152087569542311963}
 --- !u!1001 &419843652948131807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -379,6 +380,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a8dcfe7e0e5c6479e59498af89ca43, type: 3}
+--- !u!114 &9152087569542311963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3956031411550502568, guid: c1a8dcfe7e0e5c6479e59498af89ca43, type: 3}
+  m_PrefabInstance: {fileID: 5324410055457984179}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2000881628f8ae642b71d55c402bacca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &9152087569542311966 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3956031411550502573, guid: c1a8dcfe7e0e5c6479e59498af89ca43, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5401757894869490046}
   - component: {fileID: 5401757894869490047}
   - component: {fileID: 5401757894869490044}
+  - component: {fileID: 3253580347051552806}
   m_Layer: 5
   m_Name: Ability Button
   m_TagString: Untagged
@@ -121,7 +122,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5401757894869490047}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3253580347051552806}
+        m_TargetAssemblyTypeName: AbilityButtonComponent, Assembly-CSharp
+        m_MethodName: PlayerSelectAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3253580347051552806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401757894869490034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dd4f92be29f8145a12c583e031eede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5401757894996815721}
 --- !u!1 &5401757894996815727
 GameObject:
   m_ObjectHideFlags: 0

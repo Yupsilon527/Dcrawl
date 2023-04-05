@@ -21,13 +21,15 @@ public class CombatController : MonoBehaviour
     {
         return enabled;
     }
-    public FighterComponent player;
-    public FighterComponent monster;
-    public void InitialzieCombat(FighterComponent player, FighterComponent monster)
+    public DamageableComponent player;
+    public DamageableComponent monster;
+    public void InitialzieCombat(DamageableComponent player, DamageableComponent monster)
     {
         enabled = true;
         this.player = player;
+        player.ClearAttack();
         this.monster = monster;
+        monster.ClearAttack();
         InitInterface();
     }
     void InitInterface()
@@ -53,10 +55,30 @@ public class CombatController : MonoBehaviour
             player.NumAttacks++;
         }
     }
+    public void MonsterAttack()
+    {
+        ScriptableAttack monsterattack = monster.GetNextAttack();
+        if (monsterattack != null )
+        {
+            player.TakeDamage(monsterattack.AttackValue * monsterattack.AttackCount); 
+        }
+    }
+    float lastUpdateTime = 0;
+    public float CombatUpdateTime = .2f;
     private void Update()
     {
-        PlayerTurn();
-        MonsterTurn();
+        FrameUpdate();
+    }
+    void FrameUpdate()
+
+    {
+
+        if (lastUpdateTime < Time.time)
+        {
+            lastUpdateTime = Time.time + CombatUpdateTime;
+            PlayerTurn();
+            MonsterTurn();
+        }
     }
     void PlayerTurn()
     {
@@ -75,7 +97,7 @@ public class CombatController : MonoBehaviour
                     }
                     else
                     {
-                        player.Attack = -1;
+                        player.ClearAttack() ;
                         cState = GameState.waitforplayer;
                     }
                     
@@ -85,10 +107,6 @@ public class CombatController : MonoBehaviour
             {
                 cState = GameState.waitforplayer;
             }
-        }
-        else
-        {
-            //Handle Defeat
         }
     }
     void MonsterTurn()
@@ -107,18 +125,25 @@ public class CombatController : MonoBehaviour
                     }
                     else
                     {
-                        //Handle monster attack
+                        MonsterAttack();
+                        monster.PickAiAttack();
                     }
                 }
             }
             else
             {
-                monster.HandleAi();
+                monster.PickAiAttack();
             }
         }
         else
         {
-            //Handle Victory
+            HandleVictory();
         }
+    }
+    void HandleVictory()
+    {
+        MessageManager.ShowMessage($"{monster.Character.name} was defeated!");
+        GameInterface.main.ChangeState(GameInterface.State.hubworld);
+        enabled = false;
     }
 }

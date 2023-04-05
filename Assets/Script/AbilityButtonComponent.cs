@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class AbilityButtonComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TMPro.TextMeshProUGUI text;
+    ScriptableAttack attack;
+    int attackID = 0;
+    public void AssignAbility(int attackID, ScriptableAttack attack)
     {
+        this.attack = attack;
+        gameObject.SetActive(true);
+        this.attackID = attackID;
+
+        text.text = attack.name;
         
+    }
+    public void PlayerSelectAbility()
+    {
+        if (attack!=null)
+        {
+            if (PlayerMob.main.damageable.ActionPoints == 0 && PlayerMob.main.damageable.NumAttacks == 0)
+            {
+                PlayerMob.main.damageable.PickAttack(attackID);
+            }
+        }
+    }
+    public void ClearAbility()
+    {
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

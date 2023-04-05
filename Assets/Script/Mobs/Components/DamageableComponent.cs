@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FighterComponent : BaseComponent
+public class DamageableComponent : BaseComponent
 {
     public ScriptableMonster Character;
     public Resource Life;
@@ -35,13 +35,17 @@ public class FighterComponent : BaseComponent
     {
         return SanityCheck() && Life.GetValue() > 0;
     }
-    void TakeRawDamage(float damage)
+    public void TakeRawDamage(float healing)
     {
-        Life.SubstractValue(damage);
+        Life.SubstractValue(healing);
         if (!IsAlive())
             parent.Die();
     }
-    public void HandleAi()
+    public void HealRawDamage(float damage)
+    {
+        Life.GiveValue(damage);
+    }
+    public void PickAiAttack()
     {
         PickAttack((Attack+1)% Character.Attacks.Length);
     }

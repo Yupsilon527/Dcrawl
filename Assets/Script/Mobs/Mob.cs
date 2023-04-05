@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mob : MonoBehaviour
 {
     public Movement movement;
-    public FighterComponent damageable;
+    public DamageableComponent damageable;
     public AudioSource audio;
 
     public AudioClip monsterCall;
@@ -14,7 +14,7 @@ public class Mob : MonoBehaviour
     protected virtual void Awake()
     {
         movement = GetComponent<Movement>();
-        damageable = GetComponent<FighterComponent>();
+        damageable = GetComponent<DamageableComponent>();
         audio = GetComponent<AudioSource>();
     }
     protected virtual void Start()

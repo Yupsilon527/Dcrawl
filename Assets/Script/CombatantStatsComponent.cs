@@ -5,8 +5,8 @@ using UnityEngine;
 public class CombatantStatsComponent : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI statsText;
-    FighterComponent fighter;
-    public void AssignFighter(FighterComponent combatant)
+    DamageableComponent fighter;
+    public void AssignFighter(DamageableComponent combatant)
     {
         fighter = combatant;
         UpdateText();

@@ -7,12 +7,17 @@ public class CombatInterface : MonoBehaviour
     public CombatantStatsComponent playerInfo;
     public CombatantStatsComponent enemyInfo;
     public MonsterTargetingComponent monsterTargetingComponent;
-    public void AssignFighterSide(FighterComponent fighter, bool player)
+    public PlayerActionsComponent playerActionsComponent;
+    public void AssignFighterSide(DamageableComponent fighter, bool player)
     {
         if (player)
-        { playerInfo.AssignFighter(fighter); }
+        {
+            playerInfo.AssignFighter(fighter);
+            playerActionsComponent.AssignPlayer(fighter);
+        }
         else
-        { enemyInfo.AssignFighter(fighter);
+        { 
+            enemyInfo.AssignFighter(fighter);
             monsterTargetingComponent.Randomize();
         }
     }

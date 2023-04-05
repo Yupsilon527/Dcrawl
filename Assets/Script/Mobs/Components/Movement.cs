@@ -46,6 +46,7 @@ public class Movement : BaseComponent
         return  Move (DataItemWorld.main.GetTile(pos.x, pos.y, true), dur);
         
     }
+    public float WallBumpDamage = 0;
     public bool Move(DisplayItemTile nTile, float dur) {
         if (nTile != null)
         {
@@ -54,6 +55,8 @@ public class Movement : BaseComponent
             {
                 if (parent.audio != null && wallbumpSound != null)
                     parent.audio.PlayOneShot(wallbumpSound);
+                if (WallBumpDamage>0 && parent.damageable!=null)
+                    parent.damageable.TakeRawDamage( WallBumpDamage);
             }
             else if (nTile.LocatedEntity != null)
             {

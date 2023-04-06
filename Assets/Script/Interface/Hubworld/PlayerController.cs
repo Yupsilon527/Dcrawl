@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         {
               if (PlayerMob.main.movement.MoveForward())
             {
-                GameManager.main.ForwardTurn(PlayerMob.main.MoveAP);
+                //GameManager.main.ForwardTurn(PlayerMob.main.MoveAP);
             }
             else
             {
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
         {
             PlayerMob.main.movement.Turn(true, PlayerMob.main.movement.DefaultTurnSpeed);
-            GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
+          //  GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
         }
     }
     public void TurnaPlayerLeft()
@@ -62,12 +62,12 @@ public class PlayerController : MonoBehaviour
         if (PlayerMob.main != null && PlayerMob.main.movement != null)
         {
             PlayerMob.main.movement.Turn(false, PlayerMob.main.movement.DefaultTurnSpeed);
-            GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
+            //GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
         }
     }
     public void HandleWait()
     {
-        GameManager.main.ForwardTurn(PlayerMob.main.WaitAP);
+        //GameManager.main.ForwardTurn(PlayerMob.main.WaitAP);
     }
     public void HandleTouch()
     {

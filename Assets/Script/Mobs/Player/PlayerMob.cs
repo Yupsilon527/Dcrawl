@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerMob : Mob
 {
-    public int MoveAP = 10;
+ /*   public int MoveAP = 10;
     public int WaitAP = 10;
     public int TurnAP = 0;
-    public int ActionAP = 5;
+    public int ActionAP = 5;*/
     public static PlayerMob main;
     public PlayerSenseComponent sense;
+
+    public string introMessage = "You wake up in a damp cavern...";
     protected override void Awake()
     {
         main = this;
@@ -24,6 +26,7 @@ public class PlayerMob : Mob
         {
             damageable.Life.TieToHealthBar(GameInterface.main.playerHealth);
         }
+        MessageManager.ShowMessage(introMessage);
     }
     public bool CanAct()
     {

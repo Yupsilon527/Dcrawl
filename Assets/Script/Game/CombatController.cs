@@ -21,6 +21,9 @@ public class CombatController : MonoBehaviour
     {
         return enabled;
     }
+    /// <summary>
+    /// test
+    /// </summary>
     public DamageableComponent player;
     public DamageableComponent monster;
     public void InitialzieCombat(DamageableComponent player, DamageableComponent monster)
@@ -43,6 +46,10 @@ public class CombatController : MonoBehaviour
             GameInterface.main.CombatInterface.AssignFighterSide(monster, false);
         }
     }
+    public AudioClip missSound;
+    public string PlayerHitMessage = "You hit the {M} for {damage} damage!";
+    public string PlayerBlockedMessage = "Your attack was blocked!";
+    public string PlayerMissMessage = "You missed!";
     public void PlayerAttack(bool miss)
     {
         ScriptableAttack playerattack = player.GetNextAttack();
@@ -50,31 +57,69 @@ public class CombatController : MonoBehaviour
         {
             if (!miss)
             {
-                float resultingDamage = monster.TakeDamage(playerattack.AttackValue); 
-                MessageManager.ShowMessage($"You hit the  {monster.Character.name} for {resultingDamage} damage!");
-                
+                float resultingDamage = monster.TakeDamage(playerattack.AttackValue);
+
+                if (resultingDamage > 0)
+                {
+                    string hitMsg = PlayerHitMessage;
+                    hitMsg.Replace("{M}", monster.Character.name);
+                    hitMsg.Replace("{damage}", resultingDamage+"");
+                    MessageManager.ShowMessage(hitMsg);
+                }
+                else
+                    MessageManager.ShowMessage(PlayerBlockedMessage);
+
                 if (playerattack.AbilitySound!=null)
                 PlayerMob.main.audio.PlayOneShot(playerattack.AbilitySound);
             }
             else
             {
-
-                MessageManager.ShowMessage($"You missed!");
+                if (missSound != null)
+                { PlayerMob.main.audio.PlayOneShot(missSound); }
+                MessageManager.ShowMessage(PlayerMissMessage);
             }
             player.NumAttacks++;
         }
     }
+
+    public string MonsterHitMessage = "The {M} hits you for {damage} damage!";
+    public string MonsterBlockedMessage = "The {M}'s attack was blocked!";
+    public string MonsterMoveMessage = "The {M} moves around!";
     public void MonsterAttack()
     {
         ScriptableAttack monsterattack = monster.GetNextAttack();
         if (monsterattack != null )
         {
-            float resultingDamage = 0;
-            for (int i = 0; i < monsterattack.AttackCount; i++)
+            if (monsterattack.AttackCount > 0)
             {
-                resultingDamage += player.TakeDamage(monsterattack.AttackValue);
+                float resultingDamage = 0;
+                for (int i = 0; i < monsterattack.AttackCount; i++)
+                {
+                    resultingDamage += player.TakeDamage(monsterattack.AttackValue);
+                }
+                if (resultingDamage > 0)
+                {
+                    string hitMsg = MonsterHitMessage;
+                    hitMsg.Replace("{M}", monster.Character.name);
+                    hitMsg.Replace("{damage}", resultingDamage + "");
+                    MessageManager.ShowMessage(hitMsg);
+                }
+                else
+                {
+                    string blockMsg = MonsterBlockedMessage; 
+                    blockMsg.Replace("{M}", monster.Character.name);
+                    MessageManager.ShowMessage(blockMsg);
+                }
+                GameInterface.main.CombatInterface.monsterTargetingComponent.ShowMonsterAttack();
             }
-            MessageManager.ShowMessage($"The {monster.Character.name} hits you for {resultingDamage} damage!");
+            else
+            {
+                GameInterface.main.CombatInterface.monsterTargetingComponent.MoveEnemyAround();
+
+                string dodgeMsg = MonsterBlockedMessage;
+                dodgeMsg.Replace("{M}", monster.Character.name);
+                MessageManager.ShowMessage(dodgeMsg);
+            }
             if (monsterattack.AbilitySound != null)
                 PlayerMob.main.audio.PlayOneShot(monsterattack.AbilitySound);
         }

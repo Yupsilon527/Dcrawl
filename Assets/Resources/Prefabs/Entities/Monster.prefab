@@ -139,6 +139,7 @@ MonoBehaviour:
   wallbumpSound: {fileID: 0}
   DefaultWalkSpeed: 0.5
   DefaultTurnSpeed: 0.25
+  WallBumpDamage: 0
   myTile: {fileID: 0}
 --- !u!114 &2708538036478331182
 MonoBehaviour:
@@ -264,7 +265,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
-  MaximumLife: 40
+  Character: {fileID: 0}
+  Attack: -1
+  ActionPoints: 0
+  NumAttacks: 0
 --- !u!1001 &6440817163116374673
 PrefabInstance:
   m_ObjectHideFlags: 0

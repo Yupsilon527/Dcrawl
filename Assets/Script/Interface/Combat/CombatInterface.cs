@@ -8,6 +8,10 @@ public class CombatInterface : MonoBehaviour
     public CombatantStatsComponent enemyInfo;
     public MonsterTargetingComponent monsterTargetingComponent;
     public PlayerActionsComponent playerActionsComponent;
+    private void OnEnable()
+    {
+        
+    }
     public void AssignFighterSide(DamageableComponent fighter, bool player)
     {
         if (player)
@@ -18,7 +22,8 @@ public class CombatInterface : MonoBehaviour
         else
         { 
             enemyInfo.AssignFighter(fighter);
-            monsterTargetingComponent.Randomize();
+            monsterTargetingComponent.MoveEnemyAround();
+            monsterTargetingComponent.ShowMonsterAttack();
         }
     }
 
@@ -30,4 +35,5 @@ public class CombatInterface : MonoBehaviour
     {
         CombatController.main.PlayerAttack(true);
     }
+
 }

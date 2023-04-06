@@ -18,6 +18,9 @@ public class PlayerSenseComponent : BaseComponent
         HandlePlayerSight();
         EchoSounds = GetComponent<AudioSource>();
     }
+    public string WallMessage = "You feel a wall.";
+    public string EmptyMessage = "You feel nothing.";
+    public string SomethingMessage = "You touch the ";
     public void HandlePlayerTouch()
     {
         DisplayItemTile forwardTile = parent.movement.GetForwardTile();
@@ -25,22 +28,22 @@ public class PlayerSenseComponent : BaseComponent
         {
             if (!forwardTile.IsPassible())
             {
-                MessageManager.ShowMessage("You feel a wall.");
+                MessageManager.ShowMessage(WallMessage);
                 DrawTouchEffect();
                 if (solidTileSound != null)
                     parent.audio.PlayOneShot(solidTileSound);
             }
             else if (forwardTile.LocatedEntity != null)
             {
-                MessageManager.ShowMessage($"You touch the {forwardTile.LocatedEntity.name}");
+                MessageManager.ShowMessage($"{SomethingMessage}{forwardTile.LocatedEntity.name}");
                 forwardTile.LocatedEntity.OnPlayerTouch();
             }
             else if (emptyTileSound != null)
             {
-                MessageManager.ShowMessage("You feel nothing.");
+                MessageManager.ShowMessage(EmptyMessage);
                 parent.audio.PlayOneShot(emptyTileSound);
             }
-            GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
+            //GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         }
     }
     public void DrawTouchEffect()
@@ -100,7 +103,7 @@ public class PlayerSenseComponent : BaseComponent
                 break;
             }
         }
-        GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
+        //GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         EchoCoroutine = null;
     }
     public bool IsIdle()

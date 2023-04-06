@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16fc33b543389f5479fae08202c978bf, type: 3}
-  m_Name: Monster Tutorial Defend
+  m_Name: Club
   m_EditorClassIdentifier: 
-  AttackValue: 0
-  DefenseValue: 0
+  AttackValue: 10
+  DefenseValue: 5
   AttackCount: 1
-  ActionPoints: 10
+  ActionPoints: 12

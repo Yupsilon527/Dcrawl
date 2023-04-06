@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class AbilityButtonComponent : MonoBehaviour
+public class AbilityButtonComponent : EventTrigger
 {
     public TMPro.TextMeshProUGUI text;
     ScriptableAttack attack;
@@ -13,8 +14,7 @@ public class AbilityButtonComponent : MonoBehaviour
         gameObject.SetActive(true);
         this.attackID = attackID;
 
-        text.text = attack.name;
-        
+        text.text = attack.name;        
     }
     public void PlayerSelectAbility()
     {
@@ -23,12 +23,18 @@ public class AbilityButtonComponent : MonoBehaviour
             if (PlayerMob.main.damageable.ActionPoints == 0 && PlayerMob.main.damageable.NumAttacks == 0)
             {
                 PlayerMob.main.damageable.PickAttack(attackID);
+                MessageManager.ShowMessage("Select a target!");
             }
         }
     }
     public void ClearAbility()
     {
         gameObject.SetActive(false);
+    }
+    public override void OnPointerEnter(PointerEventData eventData)
+    {
+        if (attack != null && !string.IsNullOrEmpty( attack.TooltipDescription))
+            MessageManager.ShowMessage(attack.TooltipDescription);
     }
 
 }

@@ -265,4 +265,8 @@ public class Movement : BaseComponent
         SnapToPosition( endPos);
         MoveCoroutine = null;
     }
+    public bool CanMove()
+    {
+        return turnCoroutine == null && MoveCoroutine == null;
+    }
 }

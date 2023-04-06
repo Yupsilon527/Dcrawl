@@ -21,10 +21,11 @@ public class AbilityButtonComponent : EventTrigger
     {
         if (attack!=null)
         {
-            if (PlayerMob.main.damageable.ActionPoints == 0 && PlayerMob.main.damageable.NumAttacks == 0)
+            if (PlayerMob.main.damageable.CanChangeAttack())
             {
                 PlayerMob.main.damageable.PickAttack(attackID);
                 MessageManager.ShowMessage(SelectTargetMessage);
+                GameInterface.main.CombatInterface.monsterTargetingComponent.SetTargetText(true);
             }
         }
     }
@@ -34,7 +35,7 @@ public class AbilityButtonComponent : EventTrigger
     }
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        if (attack != null && !string.IsNullOrEmpty( attack.TooltipDescription))
+        if (PlayerMob.main.damageable.CanChangeAttack() && attack != null && !string.IsNullOrEmpty( attack.TooltipDescription))
             MessageManager.ShowMessage(attack.TooltipDescription);
     }
 

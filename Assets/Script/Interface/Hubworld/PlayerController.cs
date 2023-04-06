@@ -10,21 +10,21 @@ public class PlayerController : MonoBehaviour
     }
     void ReadKeyboard()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             MovePlayerForward();
         }
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             TurnaPlayerLeft();
         }
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             TurnaPlayerRight();
         }
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            TurnaPlayerRight();
+            HandleWait();
         }
         if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftControl))
         {
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     }
     public void MovePlayerForward()
     {
-        if (PlayerMob.main != null && PlayerMob.main.movement != null)
+        if (PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
         {
               if (PlayerMob.main.movement.MoveForward())
             {
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     }
     public void TurnaPlayerRight()
     {
-        if (PlayerMob.main != null && PlayerMob.main.movement != null)
+        if (PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
         {
             PlayerMob.main.movement.Turn(true, PlayerMob.main.movement.DefaultTurnSpeed);
           //  GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     }
     public void TurnaPlayerLeft()
     {
-        if (PlayerMob.main != null && PlayerMob.main.movement != null)
+        if (PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
         {
             PlayerMob.main.movement.Turn(false, PlayerMob.main.movement.DefaultTurnSpeed);
             //GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
@@ -71,14 +71,14 @@ public class PlayerController : MonoBehaviour
     }
     public void HandleTouch()
     {
-        if (PlayerMob.main != null && PlayerMob.main.sense != null)
+        if (PlayerMob.main != null && PlayerMob.main .CanAct() && PlayerMob.main.sense != null)
         {
             PlayerMob.main.sense.HandlePlayerTouch();
         }
     }
     public void HandleEcho()
     {
-        if (PlayerMob.main != null && PlayerMob.main.sense != null)
+        if (PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.sense != null)
         {
             PlayerMob.main.sense.HandlePlayerEcho();
         }

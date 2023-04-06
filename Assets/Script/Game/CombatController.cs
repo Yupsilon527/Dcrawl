@@ -79,6 +79,8 @@ public class CombatController : MonoBehaviour
                 MessageManager.ShowMessage(PlayerMissMessage);
             }
             player.NumAttacks++;
+            if (player.NumAttacks>= playerattack.AttackCount)
+                GameInterface.main.CombatInterface.monsterTargetingComponent.SetTargetText(false);
         }
     }
 
@@ -116,7 +118,7 @@ public class CombatController : MonoBehaviour
             {
                 GameInterface.main.CombatInterface.monsterTargetingComponent.MoveEnemyAround();
 
-                string dodgeMsg = MonsterBlockedMessage;
+                string dodgeMsg = MonsterMoveMessage;
                 dodgeMsg = dodgeMsg.Replace("{M}", monster.Character.name);
                 MessageManager.ShowMessage(dodgeMsg);
             }

@@ -66,4 +66,8 @@ public class DamageableComponent : BaseComponent
         ActionPoints = 0;
         NumAttacks = 0;
     }
+    public bool CanChangeAttack()
+    {
+        return ActionPoints == 0 && NumAttacks == 0;
+    }
 }

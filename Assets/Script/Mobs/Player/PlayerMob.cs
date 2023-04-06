@@ -28,9 +28,9 @@ public class PlayerMob : Mob
         }
         MessageManager.ShowMessage(introMessage);
     }
-    public bool CanAct()
+    public override bool CanAct()
     {
-        return sense.IsIdle();
+        return base.CanAct() && sense.IsIdle();
     }
     public override void PostMove()
     {

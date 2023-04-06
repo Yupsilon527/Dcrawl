@@ -39,4 +39,12 @@ public class MonsterTargetingComponent : MonoBehaviour
         monsterAttack?.SetActive(false);
         AttackCoroutine = null;
     }
+    public TMPro.TextMeshProUGUI targetText;
+    public void SetTargetText(bool value)
+    {
+        if (targetText!=null)
+        {
+            targetText.gameObject.SetActive(value);
+        }
+    }
 }

@@ -19,7 +19,7 @@ public class EnemyMob : Mob
         if (damageable != null && damageable.Character != null)
         {
             string hearMes = HearMessage;
-            hearMes.Replace("{thing}", damageable.Character.name);
+            hearMes = hearMes.Replace("{thing}", damageable.Character.name);
             MessageManager.ShowMessage(hearMes);
         }
     }

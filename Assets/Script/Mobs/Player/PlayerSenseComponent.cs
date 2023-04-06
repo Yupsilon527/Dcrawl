@@ -53,6 +53,7 @@ public class PlayerSenseComponent : BaseComponent
     }
     public GameObject SoundParticle;
     public GameObject CuriosityParticle;
+    public float ActionDuration = .15f;
     public float ParticleInterval = .5f;
     public int EchoRange = 10;
     public void HandlePlayerEcho()
@@ -69,6 +70,7 @@ public class PlayerSenseComponent : BaseComponent
     IEnumerator EchoEffect(Vector2Int startPos, Vector2Int dir)
     {
         MessageManager.ShowMessage(EchoMessage);
+        yield return new WaitForSeconds(ActionDuration);
         Vector2Int cTile = startPos + dir;
         bool intrerupted = false;
         for (int i = 1; i < EchoRange && !intrerupted; i++)

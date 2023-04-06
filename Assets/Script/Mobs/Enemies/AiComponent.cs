@@ -20,6 +20,7 @@ public class AiComponent : BaseComponent
     }
     public void ResolveTurn()
     {
+        if (!parent.CanAct()) return;
         if (aggroed ){ ChasePlayer();        }
         else if (behavior == Behavior.roaming)
         {

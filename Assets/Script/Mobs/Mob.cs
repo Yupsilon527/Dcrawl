@@ -43,6 +43,10 @@ public class Mob : MonoBehaviour
     {
         return (gameObject.activeSelf && gameObject.activeInHierarchy);
     }
+    public virtual bool CanAct()
+    {
+        return movement.CanMove();
+    }
     public virtual void Die()
     {
         movement.myTile.LocatedEntity = null;

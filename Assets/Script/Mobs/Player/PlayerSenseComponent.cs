@@ -31,7 +31,8 @@ public class PlayerSenseComponent : BaseComponent
                 MessageManager.ShowMessage(WallMessage);
                 DrawTouchEffect();
                 if (solidTileSound != null)
-                    parent.audio.PlayOneShot(solidTileSound);
+                    //parent.audio.PlayOneShot(solidTileSound);
+                    AudioManager.Instance.PlaySfx("Empty hand swipe", 0);
             }
             else if (forwardTile.LocatedEntity != null)
             {
@@ -59,7 +60,8 @@ public class PlayerSenseComponent : BaseComponent
     {
         Vector2Int startPos = parent.movement.myTile.gridPos;
         Vector2Int dir = parent.movement.GetForward();
-        EchoSounds.PlayOneShot(EchoSound);
+        //EchoSounds.PlayOneShot(EchoSound);
+        AudioManager.Instance.PlaySfx("Player Call", 2);
 
         if (EchoCoroutine == null)
             StartCoroutine(EchoEffect(startPos,dir));

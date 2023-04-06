@@ -32,7 +32,8 @@ public class PlayerSenseComponent : BaseComponent
                 DrawTouchEffect();
                 if (solidTileSound != null)
                     //parent.audio.PlayOneShot(solidTileSound);
-                    AudioManager.Instance.PlaySfx("Empty hand swipe", 0);
+                    AudioManager.Instance.PlaySfx("Wall sound", 4);
+
             }
             else if (forwardTile.LocatedEntity != null)
             {
@@ -42,7 +43,7 @@ public class PlayerSenseComponent : BaseComponent
             else if (emptyTileSound != null)
             {
                 MessageManager.ShowMessage(EmptyMessage);
-                parent.audio.PlayOneShot(emptyTileSound);
+                AudioManager.Instance.PlaySfx("Empty hand swipe", 0);
             }
             //GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         }

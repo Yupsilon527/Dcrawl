@@ -16,6 +16,7 @@ public class AbilityButtonComponent : EventTrigger
 
         text.text = attack.name;        
     }
+    public string SelectTargetMessage = "Select a target!";
     public void PlayerSelectAbility()
     {
         if (attack!=null)
@@ -23,7 +24,7 @@ public class AbilityButtonComponent : EventTrigger
             if (PlayerMob.main.damageable.ActionPoints == 0 && PlayerMob.main.damageable.NumAttacks == 0)
             {
                 PlayerMob.main.damageable.PickAttack(attackID);
-                MessageManager.ShowMessage("Select a target!");
+                MessageManager.ShowMessage(SelectTargetMessage);
             }
         }
     }

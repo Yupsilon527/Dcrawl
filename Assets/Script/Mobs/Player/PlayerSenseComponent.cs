@@ -65,9 +65,10 @@ public class PlayerSenseComponent : BaseComponent
             StartCoroutine(EchoEffect(startPos,dir));
     }
     Coroutine EchoCoroutine;
+    public string EchoMessage = "You call out...";
     IEnumerator EchoEffect(Vector2Int startPos, Vector2Int dir)
     {
-        MessageManager.ShowMessage("You call out...");
+        MessageManager.ShowMessage(EchoMessage);
         Vector2Int cTile = startPos + dir;
         bool intrerupted = false;
         for (int i = 1; i < EchoRange && !intrerupted; i++)

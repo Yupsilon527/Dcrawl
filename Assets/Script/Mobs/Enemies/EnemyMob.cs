@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMob : Mob
 {
     public AiComponent ai;
+    public string HearMessage = "The {thing} hears you...";
     protected override void Awake()
     {
         base.Awake();
@@ -15,8 +16,12 @@ public class EnemyMob : Mob
     {
         base.OnPlayerEcho();
         ai.SetAggro(true);
-        if (damageable!=null && damageable.Character!=null)
-        MessageManager.ShowMessage($"The {damageable.Character.name} hears you...");
+        if (damageable != null && damageable.Character != null)
+        {
+            string hearMes = HearMessage;
+            hearMes.Replace("{thing}", damageable.Character.name);
+            MessageManager.ShowMessage(hearMes);
+        }
     }
     public override void OnPlayerTouch()
     {

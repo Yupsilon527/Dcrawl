@@ -201,9 +201,10 @@ public class CombatController : MonoBehaviour
             HandleVictory();
         }
     }
+    public string DefeatMessage = " was defeated!";
     void HandleVictory()
     {
-        MessageManager.ShowMessage($"{monster.Character.name} was defeated!");
+        MessageManager.ShowMessage($"{monster.Character.name}{DefeatMessage}");
         GameInterface.main.ChangeState(GameInterface.State.hubworld);
         enabled = false;
     }

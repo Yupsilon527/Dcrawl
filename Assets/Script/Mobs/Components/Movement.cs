@@ -47,6 +47,8 @@ public class Movement : BaseComponent
         
     }
     public float WallBumpDamage = 0;
+    public string WallBumpMessage = "You bump into the {thing}!";
+    public string EntityBumpMessage = "The {thing} attacks you!";
     public bool Move(DisplayItemTile nTile, float dur) {
         if (nTile != null)
         {
@@ -62,12 +64,18 @@ public class Movement : BaseComponent
             {
                 if (parent == PlayerMob.main)
                 {
-                    MessageManager.ShowMessage($"You bump into the {parent.damageable.Character.name}!");
+                    string bumpmsg = WallBumpMessage;
+                    bumpmsg.Replace("{thing}", parent.damageable.Character.name);
+                    MessageManager.ShowMessage(bumpmsg);
                     nTile.LocatedEntity.OnPlayerTouch();
                 }
                 if (nTile.LocatedEntity == PlayerMob.main)
                 {
-                    MessageManager.ShowMessage($"The {parent.damageable.Character.name} attacks you!");
+                    string msg = EntityBumpMessage;
+                    msg.Replace("{thing}", parent.damageable.Character.name);
+                    MessageManager.ShowMessage(msg);
+
+
                     parent.OnPlayerTouch();
                 }
             }

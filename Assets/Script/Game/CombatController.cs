@@ -62,8 +62,8 @@ public class CombatController : MonoBehaviour
                 if (resultingDamage > 0)
                 {
                     string hitMsg = PlayerHitMessage;
-                    hitMsg.Replace("{M}", monster.Character.name);
-                    hitMsg.Replace("{damage}", resultingDamage+"");
+                    hitMsg= hitMsg.Replace("{M}", monster.Character.name);
+                    hitMsg = hitMsg.Replace("{damage}", resultingDamage+"");
                     MessageManager.ShowMessage(hitMsg);
                 }
                 else
@@ -100,14 +100,14 @@ public class CombatController : MonoBehaviour
                 if (resultingDamage > 0)
                 {
                     string hitMsg = MonsterHitMessage;
-                    hitMsg.Replace("{M}", monster.Character.name);
-                    hitMsg.Replace("{damage}", resultingDamage + "");
+                    hitMsg = hitMsg.Replace("{M}", monster.Character.name);
+                    hitMsg = hitMsg.Replace("{damage}", resultingDamage + "");
                     MessageManager.ShowMessage(hitMsg);
                 }
                 else
                 {
-                    string blockMsg = MonsterBlockedMessage; 
-                    blockMsg.Replace("{M}", monster.Character.name);
+                    string blockMsg = MonsterBlockedMessage;
+                    blockMsg = blockMsg.Replace("{M}", monster.Character.name);
                     MessageManager.ShowMessage(blockMsg);
                 }
                 GameInterface.main.CombatInterface.monsterTargetingComponent.ShowMonsterAttack();
@@ -117,7 +117,7 @@ public class CombatController : MonoBehaviour
                 GameInterface.main.CombatInterface.monsterTargetingComponent.MoveEnemyAround();
 
                 string dodgeMsg = MonsterBlockedMessage;
-                dodgeMsg.Replace("{M}", monster.Character.name);
+                dodgeMsg = dodgeMsg.Replace("{M}", monster.Character.name);
                 MessageManager.ShowMessage(dodgeMsg);
             }
             if (monsterattack.AbilitySound != null)

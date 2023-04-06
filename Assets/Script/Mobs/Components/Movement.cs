@@ -72,7 +72,7 @@ public class Movement : BaseComponent
                 if (nTile.LocatedEntity == PlayerMob.main)
                 {
                     string msg = EntityBumpMessage;
-                    msg.Replace("{thing}", parent.damageable.Character.name);
+                    msg= msg.Replace("{thing}", parent.damageable.Character.name);
                     MessageManager.ShowMessage(msg);
 
 

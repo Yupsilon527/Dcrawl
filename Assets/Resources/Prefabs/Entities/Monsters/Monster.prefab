@@ -122,7 +122,6 @@ MonoBehaviour:
   monsterCall: {fileID: 8300000, guid: 2cbb26f2d9415474eaa3c4265b2d7e56, type: 3}
   noiseParticle: {fileID: 0}
   ai: {fileID: 0}
-  HearMessage: The {thing} hears you...
 --- !u!114 &2708538036478331601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +158,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   behavior: 1
   behaviorData: 100
+  AggroMessage: The {thing} hears you...
 --- !u!82 &8022538418081121879
 AudioSource:
   m_ObjectHideFlags: 0
@@ -180,9 +180,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 5
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

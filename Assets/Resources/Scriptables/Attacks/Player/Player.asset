@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bf9cd652f1c5a4da5601935993571f, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  MaximumLife: 150
+  MaximumLife: 100
   Attacks:
   - {fileID: 11400000, guid: 4f36b25041a269d4faaabd8850a89e2a, type: 2}
   - {fileID: 11400000, guid: 4538c3d14d3b0f745b47e1520fe9ccbf, type: 2}

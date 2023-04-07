@@ -9994,6 +9994,8 @@ MonoBehaviour:
   DefaultWalkSpeed: 0.5
   DefaultTurnSpeed: 0.25
   WallBumpDamage: 0
+  WallBumpMessage: You bump into the {thing}!
+  EntityBumpMessage: The {thing} attacks you!
   myTile: {fileID: 0}
 --- !u!114 &2739647066059456400
 MonoBehaviour:
@@ -10012,11 +10014,9 @@ MonoBehaviour:
   audio: {fileID: 7838038703135044375}
   monsterCall: {fileID: 8300000, guid: 4726669868a286844b28b0b578379802, type: 3}
   noiseParticle: {fileID: 0}
-  MoveAP: 0
-  WaitAP: 0
-  TurnAP: 0
-  ActionAP: 0
   sense: {fileID: 0}
+  introMessage: You wake up in a damp cavern...
+  deathScene: You wake up in a damp cavern...
 --- !u!82 &7838038703135044375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10130,10 +10130,15 @@ MonoBehaviour:
   solidTileSound: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
   EchoSound: {fileID: 8300000, guid: 4726669868a286844b28b0b578379802, type: 3}
   mixerGroup: {fileID: 2927092927507583616, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+  WallMessage: You feel a wall.
+  EmptyMessage: You feel nothing.
+  SomethingMessage: 'You touch the '
   SoundParticle: {fileID: 9109303407789349486, guid: f2fdb4423d91a1e4a86d1534c71bece9, type: 3}
   CuriosityParticle: {fileID: 2564265579650242637, guid: a22eb188c8ee3f64d905231dacf491c3, type: 3}
+  ActionDuration: 0.15
   ParticleInterval: 0.1
-  EchoRange: 10
+  EchoRange: 15
+  EchoMessage: You call out...
   FrontWall: {fileID: 1278158145}
   FrontWallParticle: {fileID: 4771257419569188338}
   FrontHollow: {fileID: 0}

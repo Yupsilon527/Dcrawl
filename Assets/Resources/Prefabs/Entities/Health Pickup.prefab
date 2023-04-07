@@ -236,7 +236,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   monsterCall: {fileID: 8300000, guid: f2554fcccc0723c428b5fd3e7fc7f3ec, type: 3}
   noiseParticle: {fileID: 0}
-  HealthGiven: 50
+  HealthGiven: 25
   EchoMessage: There's something there...
   PickupMessage: You drink the potion of healing and recover {healing} life!
 --- !u!1 &4242841107285505818

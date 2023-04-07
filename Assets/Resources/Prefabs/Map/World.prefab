@@ -83,8 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb4eadacca263f41b17b7649e8a7236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reverbZone: {fileID: 3731897374349557181}
-  player: {fileID: 0}
+  reverbZones: []
+  maxDistance: 10
 --- !u!1 &4279691743202066500
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   MonsterHitMessage: The {M} hits you for {damage} damage!
   MonsterBlockedMessage: The {M}'s attack was blocked!
   MonsterMoveMessage: The {M} moves around!
-  CombatUpdateTime: 0.2
+  CombatUpdateTime: 0.05
   DefeatMessage: ' was defeated!'
 --- !u!114 &6164070808323233200
 MonoBehaviour:
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPool: {fileID: 2694094906532997211}
   enemies: []
-  ActionPointsPerTurn: 60
+  ActionPointsPerTurn: 45
 --- !u!1 &8257771264165505629
 GameObject:
   m_ObjectHideFlags: 0

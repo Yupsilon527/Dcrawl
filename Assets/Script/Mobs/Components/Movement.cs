@@ -82,6 +82,7 @@ public class Movement : BaseComponent
 
                     parent.OnPlayerTouch(nTile.LocatedEntity);
                 }
+                return true;
             }
             else
             {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bf9cd652f1c5a4da5601935993571f, type: 3}
   m_Name: Drowner
   m_EditorClassIdentifier: 
-  MaximumLife: 100
+  MaximumLife: 80
   Attacks:
   - {fileID: 11400000, guid: 5dc768b1d44d70d4fa09aec1ec706861, type: 2}
   - {fileID: 11400000, guid: a76bebbd08099d94aaa1c62d6bd38aca, type: 2}

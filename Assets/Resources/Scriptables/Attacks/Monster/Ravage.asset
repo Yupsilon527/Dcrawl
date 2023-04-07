@@ -15,6 +15,6 @@ MonoBehaviour:
   TooltipDescription: 
   AbilitySoundName: Monster Attack
   AttackValue: 20
-  DefenseValue: 5
+  DefenseValue: 3
   AttackCount: 1
   ActionPoints: 20

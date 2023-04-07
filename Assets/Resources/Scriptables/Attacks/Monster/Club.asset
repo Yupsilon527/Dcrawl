@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Club
   m_EditorClassIdentifier: 
   TooltipDescription: 
-  AbilitySound: {fileID: 0}
+  AbilitySoundName: Monster Attack
   AttackValue: 10
   DefenseValue: 5
   AttackCount: 1

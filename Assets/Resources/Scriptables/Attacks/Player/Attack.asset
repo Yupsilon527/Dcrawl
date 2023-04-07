@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Attack
   m_EditorClassIdentifier: 
   TooltipDescription: A single, confindent attack
-  AbilitySound: {fileID: 0}
+  AbilitySoundName: Attack
   AttackValue: 15
   DefenseValue: 5
   AttackCount: 1

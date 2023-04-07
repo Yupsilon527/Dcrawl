@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Defend
   m_EditorClassIdentifier: 
   TooltipDescription: Take a defensive stance, reducing incoming damage.
-  AbilitySound: {fileID: 0}
+  AbilitySoundName: Defend
   AttackValue: 0
   DefenseValue: 15
   AttackCount: 0

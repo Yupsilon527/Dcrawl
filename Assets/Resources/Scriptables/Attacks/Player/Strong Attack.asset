@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Strong Attack
   m_EditorClassIdentifier: 
   TooltipDescription: A slow and strong attack.
-  AbilitySound: {fileID: 0}
+  AbilitySoundName: Strong Attack
   AttackValue: 20
   DefenseValue: 0
   AttackCount: 1

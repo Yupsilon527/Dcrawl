@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fc33b543389f5479fae08202c978bf, type: 3}
   m_Name: Ravage
   m_EditorClassIdentifier: 
+  TooltipDescription: 
+  AbilitySoundName: Monster Attack
   AttackValue: 20
   DefenseValue: 5
   AttackCount: 1

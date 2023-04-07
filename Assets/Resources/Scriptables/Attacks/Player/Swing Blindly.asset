@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Swing Blindly
   m_EditorClassIdentifier: 
   TooltipDescription: Multiple blind swings in the dark.
-  AbilitySound: {fileID: 0}
+  AbilitySoundName: Swing Blindly
   AttackValue: 5
   DefenseValue: 0
   AttackCount: 3

@@ -183,6 +183,22 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d7d0c0000b61e244daa1d7fbd511a8f3, type: 3}
   - name: Player Call
     clip: {fileID: 8300000, guid: 4726669868a286844b28b0b578379802, type: 3}
+  - name: Health Pickup
+    clip: {fileID: 8300000, guid: 46839388de01b044d8dc7f0763b43b9d, type: 3}
+  - name: Strong Attack
+    clip: {fileID: 8300000, guid: 00fd761dcbce8ea419d55c0d202c7903, type: 3}
+  - name: Attack
+    clip: {fileID: 8300000, guid: 7ccfdd7ca29c44c4b9c6de91b45c3bb5, type: 3}
+  - name: Swing Blindly
+    clip: {fileID: 8300000, guid: c376d727e78aa784bb41e772f2aafea6, type: 3}
+  - name: Defend
+    clip: {fileID: 8300000, guid: 37be27429b8d335488d8a7dc022a33ec, type: 3}
+  - name: Attack Miss
+    clip: {fileID: 8300000, guid: 4b4bc04f21ace4a47a570dccf0d5d9d2, type: 3}
+  - name: Monster Steps
+    clip: {fileID: 8300000, guid: 3adef644a9777a64f868638eb25d6cf2, type: 3}
+  - name: Monster Attack
+    clip: {fileID: 8300000, guid: 3adef644a9777a64f868638eb25d6cf2, type: 3}
   ambient:
   - name: Level Music
     clip: {fileID: 8300000, guid: 803e054b113c59543920f6512739f546, type: 3}
@@ -194,6 +210,9 @@ MonoBehaviour:
   - {fileID: 2927092927507583616, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
   - {fileID: -6832760232123809387, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
   - {fileID: 8710945492327062718, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+  - {fileID: 6197445156513534611, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+  - {fileID: -6858398126161033745, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+  - {fileID: -1874767510081485131, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
 --- !u!1 &7037463380028101307
 GameObject:
   m_ObjectHideFlags: 0

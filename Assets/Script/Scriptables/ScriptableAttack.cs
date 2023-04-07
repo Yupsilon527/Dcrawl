@@ -6,7 +6,7 @@ using UnityEngine;
 public class ScriptableAttack : ScriptableObject
 {
     public string TooltipDescription;
-    public AudioClip AbilitySound;
+    public string AbilitySoundName;
     public int AttackValue = 0;
     public int DefenseValue = 0;
     public int AttackCount = 0;

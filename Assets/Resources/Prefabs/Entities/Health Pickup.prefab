@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 163642158751857690}
-  footstepSound: {fileID: 8300000, guid: 6fdf276d79501ec4081ef2f07e02a0cb, type: 3}
+  footstepSound: {fileID: 8300000, guid: 46839388de01b044d8dc7f0763b43b9d, type: 3}
   wallbumpSound: {fileID: 0}
   DefaultWalkSpeed: 0.5
   DefaultTurnSpeed: 0.25
@@ -234,7 +234,7 @@ MonoBehaviour:
   movement: {fileID: 4071235670356643124}
   damageable: {fileID: 0}
   audio: {fileID: 0}
-  monsterCall: {fileID: 8300000, guid: f2554fcccc0723c428b5fd3e7fc7f3ec, type: 3}
+  monsterCall: {fileID: 8300000, guid: 46839388de01b044d8dc7f0763b43b9d, type: 3}
   noiseParticle: {fileID: 0}
   HealthGiven: 25
   EchoMessage: There's something there...

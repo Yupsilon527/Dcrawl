@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fc33b543389f5479fae08202c978bf, type: 3}
   m_Name: Scratch
   m_EditorClassIdentifier: 
+  TooltipDescription: 
+  AbilitySoundName: Monster Attack
   AttackValue: 10
   DefenseValue: 0
   AttackCount: 1

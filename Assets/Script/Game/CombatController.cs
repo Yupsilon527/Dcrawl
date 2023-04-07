@@ -70,9 +70,8 @@ public class CombatController : MonoBehaviour
                     MessageManager.ShowMessage(PlayerBlockedMessage);
                 AudioManager.Instance.PlaySfx("Defend", 6);
 
-                if (playerattack.AbilitySound != null)
-                    //PlayerMob.main.audio.PlayOneShot(playerattack.AbilitySound);
-                    AudioManager.Instance.PlaySfx("Attack", 6);
+                if (playerattack.AbilitySoundName != null)
+                    AudioManager.Instance.PlaySfx(playerattack.AbilitySoundName, 6);
             }
             else
             {
@@ -129,9 +128,8 @@ public class CombatController : MonoBehaviour
                 dodgeMsg = dodgeMsg.Replace("{M}", monster.Character.name);
                 MessageManager.ShowMessage(dodgeMsg);
             } AudioManager.Instance.PlaySfx("Attack", 6);
-            if (monsterattack.AbilitySound != null)
-                //PlayerMob.main.audio.PlayOneShot(monsterattack.AbilitySound);
-                AudioManager.Instance.PlaySfx("Player Damage", 5); 
+            if (monsterattack.AbilitySoundName != null)
+                AudioManager.Instance.PlaySfx(monsterattack.AbilitySoundName, 5); 
         }
     }
     float lastUpdateTime = 0;

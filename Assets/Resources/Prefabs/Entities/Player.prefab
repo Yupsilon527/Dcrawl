@@ -9889,7 +9889,7 @@ GameObject:
   - component: {fileID: 1694207037631169260}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9989,7 +9989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 2739647066059456400}
-  footstepSound: {fileID: 8300000, guid: 7d42f51a33c67ae4bbaa4109fb140f80, type: 3}
+  footstepSound: {fileID: 0}
   wallbumpSound: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
   DefaultWalkSpeed: 0.5
   DefaultTurnSpeed: 0.5

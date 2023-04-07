@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6718595667393656253, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: behaviorData
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6718595667393656386, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: myTile

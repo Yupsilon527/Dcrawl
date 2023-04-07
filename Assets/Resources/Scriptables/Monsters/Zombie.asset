@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bf9cd652f1c5a4da5601935993571f, type: 3}
   m_Name: Zombie
   m_EditorClassIdentifier: 
-  MaximumLife: 40
+  MaximumLife: 50
   Attacks:
   - {fileID: 11400000, guid: a0ddfe025d64242478646c40f5258732, type: 2}
   - {fileID: 11400000, guid: 6b121cb4d1c5c1945948f3e9f9f2bd30, type: 2}

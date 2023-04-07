@@ -9992,7 +9992,7 @@ MonoBehaviour:
   footstepSound: {fileID: 8300000, guid: 7d42f51a33c67ae4bbaa4109fb140f80, type: 3}
   wallbumpSound: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
   DefaultWalkSpeed: 0.5
-  DefaultTurnSpeed: 0.25
+  DefaultTurnSpeed: 0.5
   WallBumpDamage: 0
   WallBumpMessage: You bump into the {thing}!
   EntityBumpMessage: The {thing} attacks you!

@@ -9928,7 +9928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193981194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.89, y: 0.53, z: 3.28}
+  m_LocalPosition: {x: 8.43, y: 0.53, z: 10.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9958,7 +9958,7 @@ AudioReverbZone:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193981194}
   m_Enabled: 1
-  m_MinDistance: 0.97
+  m_MinDistance: 2.41
   m_MaxDistance: 3
   m_ReverbPreset: 22
   m_Room: -1000
@@ -11893,7 +11893,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463712119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 0.53, z: 2.26}
+  m_LocalPosition: {x: 8.72, y: 0.53, z: 5.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11923,8 +11923,8 @@ AudioReverbZone:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463712119}
   m_Enabled: 1
-  m_MinDistance: 1.69
-  m_MaxDistance: 3
+  m_MinDistance: 2.66
+  m_MaxDistance: 4.58
   m_ReverbPreset: 13
   m_Room: -1000
   m_RoomHF: -300
@@ -15181,7 +15181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818766656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.72, y: 0.53, z: 1.7}
+  m_LocalPosition: {x: 3.8, y: 0.53, z: 15.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15211,8 +15211,8 @@ AudioReverbZone:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818766656}
   m_Enabled: 1
-  m_MinDistance: 0.93
-  m_MaxDistance: 3
+  m_MinDistance: 5.3
+  m_MaxDistance: 7.5
   m_ReverbPreset: 22
   m_Room: -1000
   m_RoomHF: -1000
@@ -15238,7 +15238,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.45, y: 3, z: 2.43}
+  m_Size: {x: 3.79, y: 3, z: 2.43}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1857814620
 PrefabInstance:
@@ -18707,9 +18707,25 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3731897374349557181, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_MaxDistance
+      value: 4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731897374349557181, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_MinDistance
+      value: 1.79
+      objectReference: {fileID: 0}
     - target: {fileID: 4249574905196881792, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249574905196881792, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249574905196881792, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.71
       objectReference: {fileID: 0}
     - target: {fileID: 5167913608725562437, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
       propertyPath: mixer
@@ -18786,6 +18802,14 @@ PrefabInstance:
     - target: {fileID: 7734276216957903549, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
       propertyPath: m_Name
       value: World
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899274349176682231, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_Size.x
+      value: 2.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899274349176682231, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_Size.z
+      value: 4.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}

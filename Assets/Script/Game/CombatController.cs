@@ -62,22 +62,25 @@ public class CombatController : MonoBehaviour
                 if (resultingDamage > 0)
                 {
                     string hitMsg = PlayerHitMessage;
-                    hitMsg= hitMsg.Replace("{M}", monster.Character.name);
-                    hitMsg = hitMsg.Replace("{damage}", resultingDamage+"");
+                    hitMsg = hitMsg.Replace("{M}", monster.Character.name);
+                    hitMsg = hitMsg.Replace("{damage}", resultingDamage + "");
                     MessageManager.ShowMessage(hitMsg);
+                    if (playerattack.AbilitySoundName != null)//SFX ability specific sound
+                        AudioManager.Instance.PlaySfx(playerattack.AbilitySoundName, 6);
                 }
                 else
+                {
                     MessageManager.ShowMessage(PlayerBlockedMessage);
-                AudioManager.Instance.PlaySfx("Defend", 6);
+                    //SFX block message here
+                    AudioManager.Instance.PlaySfx("Defend", 6);    //SFX player defend
+                }
 
-                if (playerattack.AbilitySoundName != null)
-                    AudioManager.Instance.PlaySfx(playerattack.AbilitySoundName, 6);
             }
             else
             {
                 if (missSound != null)
                 { //PlayerMob.main.audio.PlayOneShot(missSound);
-                    AudioManager.Instance.PlaySfx("Attack Miss", 6);
+                    AudioManager.Instance.PlaySfx("Attack Miss", 6);    //SFX player miss
                 }
                 MessageManager.ShowMessage(PlayerMissMessage);
             }
@@ -128,9 +131,9 @@ public class CombatController : MonoBehaviour
                 string dodgeMsg = MonsterMoveMessage;
                 dodgeMsg = dodgeMsg.Replace("{M}", monster.Character.name);
                 MessageManager.ShowMessage(dodgeMsg);
-            } AudioManager.Instance.PlaySfx("Attack", 6);
+            } 
             if (monsterattack.AbilitySoundName != null)
-                AudioManager.Instance.PlaySfx(monsterattack.AbilitySoundName, 5); 
+                AudioManager.Instance.PlaySfx(monsterattack.AbilitySoundName, 5); //SFX ability specific sound
         }
     }
     float lastUpdateTime = 0;

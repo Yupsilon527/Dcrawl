@@ -24,7 +24,7 @@ public class PotionMob : Mob
             MessageManager.ShowMessage(healMsg);
 
             if (other.audio != null && monsterCall != null)
-                other.audio.PlayOneShot(monsterCall);
+                other.audio.PlayOneShot(monsterCall);   //SFX play the potion heal effect here
 
             other.damageable.HealRawDamage(HealthGiven);
             Die();

@@ -980,6 +980,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d42f51a33c67ae4bbaa4109fb140f80, type: 3}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a5e5ed0700659e34b8957a3e4634d996, type: 3}
     - target: {fileID: 7037463379255659123, guid: bcecbad55abcd874595810be9591bb11, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1427,6 +1439,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 267957206}
+    - target: {fileID: 905422761697498221, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
       propertyPath: m_Name
       value: Level 3 Aggro (2)
@@ -1439,6 +1455,10 @@ PrefabInstance:
       propertyPath: behavior
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4703688487045132851, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
+      propertyPath: monsterCall
+      value: 
+      objectReference: {fileID: 8300000, guid: 39e531a1448d2ab4689fb41dba050a52, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
 --- !u!4 &134482145 stripped
@@ -6433,6 +6453,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 241951578}
+    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (3)
@@ -7429,6 +7453,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 24748533}
     m_Modifications:
+    - target: {fileID: 4183276415153121825, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: Priority
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183276415153121825, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.644
+      objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923488, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7477,6 +7509,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 716744133}
+    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (1)
@@ -9399,6 +9435,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 1718591273}
+    - target: {fileID: 6718595667393656386, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 6718595667393656389, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9884,7 +9924,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193981194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.89, y: 0.53, z: 3.28}
+  m_LocalPosition: {x: 8.43, y: 0.53, z: 10.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9914,20 +9954,20 @@ AudioReverbZone:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193981194}
   m_Enabled: 1
-  m_MinDistance: 0.97
+  m_MinDistance: 2.41
   m_MaxDistance: 3
-  m_ReverbPreset: 22
+  m_ReverbPreset: 6
   m_Room: -1000
-  m_RoomHF: -1000
-  m_DecayTime: 2.81
-  m_DecayHFRatio: 0.14
-  m_Reflections: 429
-  m_ReflectionsDelay: 0.014
-  m_Reverb: 1023
-  m_ReverbDelay: 0.021
+  m_RoomHF: -300
+  m_DecayTime: 2.31
+  m_DecayHFRatio: 0.64
+  m_Reflections: -711
+  m_ReflectionsDelay: 0.012
+  m_Reverb: 83
+  m_ReverbDelay: 0.017
   m_HFReference: 5000
-  m_Diffusion: 80
-  m_Density: 60
+  m_Diffusion: 100
+  m_Density: 100
   m_LFReference: 250
   m_RoomLF: 0
 --- !u!65 &1193981198
@@ -9950,6 +9990,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 24748533}
     m_Modifications:
+    - target: {fileID: 2615988919307508501, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
+      propertyPath: Priority
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615988919307508501, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.247
+      objectReference: {fileID: 0}
     - target: {fileID: 7966512453169452936, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
       propertyPath: m_Name
       value: Level 1 Roaming (1)
@@ -9962,6 +10010,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 172172100}
+    - target: {fileID: 7966512453169452947, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 7966512453169452948, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11864,7 +11916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463712119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 0.53, z: 2.26}
+  m_LocalPosition: {x: 8.72, y: 0.53, z: 5.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11894,8 +11946,8 @@ AudioReverbZone:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463712119}
   m_Enabled: 1
-  m_MinDistance: 1.69
-  m_MaxDistance: 3
+  m_MinDistance: 2.66
+  m_MaxDistance: 4.58
   m_ReverbPreset: 13
   m_Room: -1000
   m_RoomHF: -300
@@ -13927,6 +13979,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 346664953}
+    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (2)
@@ -15028,7 +15084,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818766656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.72, y: 0.53, z: 1.7}
+  m_LocalPosition: {x: 3.8, y: 0.53, z: 15.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15058,20 +15114,20 @@ AudioReverbZone:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818766656}
   m_Enabled: 1
-  m_MinDistance: 0.93
-  m_MaxDistance: 3
-  m_ReverbPreset: 22
+  m_MinDistance: 5.3
+  m_MaxDistance: 7.5
+  m_ReverbPreset: 21
   m_Room: -1000
-  m_RoomHF: -1000
-  m_DecayTime: 2.81
-  m_DecayHFRatio: 0.14
-  m_Reflections: 429
-  m_ReflectionsDelay: 0.014
-  m_Reverb: 1023
-  m_ReverbDelay: 0.021
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_Reflections: -1363
+  m_ReflectionsDelay: 0.008
+  m_Reverb: -1153
+  m_ReverbDelay: 0.012
   m_HFReference: 5000
-  m_Diffusion: 80
-  m_Density: 60
+  m_Diffusion: 100
+  m_Density: 100
   m_LFReference: 250
   m_RoomLF: 0
 --- !u!65 &1818766660
@@ -15085,7 +15141,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.45, y: 3, z: 2.43}
+  m_Size: {x: 3.79, y: 3, z: 2.43}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1857814620
 PrefabInstance:
@@ -15675,6 +15731,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 1390325924}
+    - target: {fileID: 905422761697498221, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
       propertyPath: m_Name
       value: Level 3 Aggro (1)
@@ -15682,6 +15742,22 @@ PrefabInstance:
     - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703688487045132851, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
+      propertyPath: monsterCall
+      value: 
+      objectReference: {fileID: 8300000, guid: fd263f1d00b76e7498f072c79d45736c, type: 3}
+    - target: {fileID: 5067629187809073387, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
+      propertyPath: Priority
+      value: 178
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067629187809073387, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
+      propertyPath: m_Volume
+      value: 0.902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067629187809073387, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.717
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
@@ -18365,9 +18441,25 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3731897374349557181, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_MaxDistance
+      value: 4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731897374349557181, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_MinDistance
+      value: 1.79
+      objectReference: {fileID: 0}
     - target: {fileID: 4249574905196881792, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249574905196881792, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249574905196881792, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.71
       objectReference: {fileID: 0}
     - target: {fileID: 5167913608725562437, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
       propertyPath: mixer
@@ -18444,6 +18536,14 @@ PrefabInstance:
     - target: {fileID: 7734276216957903549, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
       propertyPath: m_Name
       value: World
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899274349176682231, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_Size.x
+      value: 2.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899274349176682231, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_Size.z
+      value: 4.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}

@@ -24,6 +24,7 @@ public class MonsterTargetingComponent : MonoBehaviour
         {
             monsterHitbox.anchoredPosition = new Vector2 ( Random.Range(-100f, 100f) * mine.rect.width * MaxDelta / 200, monsterHitbox.anchoredPosition.y);
         }
+        HideMonster();
     }
     Coroutine AttackCoroutine;
     public void ShowMonsterAttack()
@@ -40,6 +41,13 @@ public class MonsterTargetingComponent : MonoBehaviour
             StopCoroutine(AttackCoroutine);
 
         AttackCoroutine = StartCoroutine(ShowMonsterForDuration(Dur));
+    }
+    void HideMonster()
+    {
+        if (AttackCoroutine != null)
+            StopCoroutine(AttackCoroutine);
+        monsterAttack?.SetActive(false);
+
     }
     IEnumerator ShowMonsterForDuration( float dur)
     {

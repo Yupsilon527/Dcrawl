@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923160, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: behaviorData
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923488, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_RootOrder

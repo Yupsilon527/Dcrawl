@@ -30,11 +30,11 @@ public class CombatInterface : MonoBehaviour
     public void RegisterPlayerHit()
     {
         CombatController.main.PlayerAttack(false);
+        monsterTargetingComponent.ShowMonsterGetHurt();
     }
     public void RegisterPlayerMiss()
     {
         CombatController.main.PlayerAttack(true);
-        monsterTargetingComponent.ShowMonsterGetHurt();
     }
 
 }

@@ -995,6 +995,78 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: channel.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: channel.Array.data[5]
+      value: 
+      objectReference: {fileID: -8746709497249836198, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: channel.Array.data[6]
+      value: 
+      objectReference: {fileID: 8710945492327062718, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: channel.Array.data[7]
+      value: 
+      objectReference: {fileID: 8710945492327062718, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: channel.Array.data[8]
+      value: 
+      objectReference: {fileID: 8710945492327062718, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 46839388de01b044d8dc7f0763b43b9d, type: 3}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[4].name
+      value: Health Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 00fd761dcbce8ea419d55c0d202c7903, type: 3}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[5].name
+      value: Strong Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ccfdd7ca29c44c4b9c6de91b45c3bb5, type: 3}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[6].name
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c376d727e78aa784bb41e772f2aafea6, type: 3}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[7].name
+      value: Swing Blindly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 37be27429b8d335488d8a7dc022a33ec, type: 3}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[8].name
+      value: Defend
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b4bc04f21ace4a47a570dccf0d5d9d2, type: 3}
+    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: sfx.Array.data[9].name
+      value: Attack Miss
+      objectReference: {fileID: 0}
     - target: {fileID: 7037463379255659123, guid: bcecbad55abcd874595810be9591bb11, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -5,18 +5,13 @@ using UnityEngine.Audio;
 
 public class PlayerSenseComponent : BaseComponent
 {
-    public AudioClip emptyTileSound;
-    public AudioClip solidTileSound;
     public AudioClip EchoSound;
 
     public AudioMixerGroup mixerGroup; // assign your AudioMixerGroup in the inspector
 
-    private AudioSource EchoSounds;
-
     private void Start()
     {
         HandlePlayerSight();
-        EchoSounds = GetComponent<AudioSource>();
     }
     public string WallMessage = "You feel a wall.";
     public string EmptyMessage = "You feel nothing.";
@@ -30,8 +25,6 @@ public class PlayerSenseComponent : BaseComponent
             {
                 MessageManager.ShowMessage(WallMessage);
                 DrawTouchEffect();
-                if (solidTileSound != null)
-                    //parent.audio.PlayOneShot(solidTileSound);
                     AudioManager.Instance.PlaySfx("Wall sound", 4);
 
             }
@@ -40,7 +33,7 @@ public class PlayerSenseComponent : BaseComponent
                 MessageManager.ShowMessage($"{SomethingMessage}{forwardTile.LocatedEntity.name}");
                 forwardTile.LocatedEntity.OnPlayerTouch(parent);
             }
-            else if (emptyTileSound != null)
+            else 
             {
                 MessageManager.ShowMessage(EmptyMessage);
                 AudioManager.Instance.PlaySfx("Empty hand swipe", 0);
@@ -91,6 +84,10 @@ public class PlayerSenseComponent : BaseComponent
                 else if (dit.IsPassible() && SoundParticle != null)
                 {
                     Effect = GameManager.main.effectPool.PoolItem(SoundParticle);
+                    dit.Revealed = true;
+
+                    if (MinimapManager.main != null)
+                        MinimapManager.main.UpdateTile(dit);
                 }
                 else
                 {
@@ -110,6 +107,8 @@ public class PlayerSenseComponent : BaseComponent
             }
         }
         //GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
+        if (MinimapManager.main != null)
+            MinimapManager.main.UpdateMinimapAroundPlayer();
         EchoCoroutine = null;
     }
     public bool IsIdle()

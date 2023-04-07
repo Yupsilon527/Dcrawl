@@ -8,6 +8,10 @@ public class RoomInitializer : MonoBehaviour
     {
         ScanTiles();
         DataItemWorld.main.FinalizeWorld();
+        if (MinimapManager.main != null)
+        {
+            MinimapManager.main.InitializeMinimap();
+        }
     }
 
     Vector2Int mins = Vector2Int.zero;

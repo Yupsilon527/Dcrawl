@@ -118,7 +118,8 @@ public class CombatController : MonoBehaviour
                     blockMsg = blockMsg.Replace("{M}", monster.Character.name);
                     MessageManager.ShowMessage(blockMsg);
                 }
-                GameInterface.main.CombatInterface.monsterTargetingComponent.ShowMonsterAttack();
+                if (monsterattack.AttackValue > 0 )
+                    GameInterface.main.CombatInterface.monsterTargetingComponent.ShowMonsterAttack();
             }
             else
             {

@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67590a61bd781040882de14a628995b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDelta: 0.25
+  MaxDelta: 0.5
   monsterHitbox: {fileID: 1326478769749963567}
   monsterAttackDuration: 1
   monsterHurtDuration: 0.5

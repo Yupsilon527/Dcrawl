@@ -57,7 +57,7 @@ public class Movement : BaseComponent
             if (!nTile.IsPassible())
             {
                 if (gameObject.CompareTag("Player"))
-                    AudioManager.Instance.PlaySfx("Wall sound", 4);
+                    AudioManager.Instance.PlaySfx("Wall sound", 4); //SFX bump into wall
                 if (WallBumpDamage>0 && parent.damageable!=null)
                     parent.damageable.TakeRawDamage( WallBumpDamage);
             }
@@ -87,9 +87,9 @@ public class Movement : BaseComponent
             else
             {
                 if (gameObject.CompareTag("Player"))
-                    AudioManager.Instance.PlaySfx("Player Footsteps", 3);
-                else if (parent.audio != null && footstepSound != null)
-                            parent.audio.PlayOneShot(footstepSound);
+                    AudioManager.Instance.PlaySfx("Player Footsteps", 3); //SFX footsteps
+                else if (parent.audio != null && footstepSound != null)//SFX override with 3D audiosource audio
+                    parent.audio.PlayOneShot(footstepSound);
                     ChangeTile(nTile, dur);
                     return true;
                 

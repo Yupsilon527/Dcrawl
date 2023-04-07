@@ -24,13 +24,13 @@ public class Mob : MonoBehaviour
             c.OnSpawn();
         }
     }
-    public virtual void OnPlayerEcho()
+    public virtual void OnPlayerEcho(Mob other)
     {
         if (audio != null && monsterCall != null)
             audio.PlayOneShot(monsterCall);
         Debug.Log($"Player shouts at {name}");
     }
-    public virtual void OnPlayerTouch()
+    public virtual void OnPlayerTouch(Mob other)
     {
         Debug.Log($"Player touches at {name}");
     }

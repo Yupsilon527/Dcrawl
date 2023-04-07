@@ -5,30 +5,23 @@ using UnityEngine;
 public class EnemyMob : Mob
 {
     public AiComponent ai;
-    public string HearMessage = "The {thing} hears you...";
     protected override void Awake()
     {
         base.Awake();
         if (ai == null)
             ai = GetComponent<AiComponent>(); 
     }
-    public override void OnPlayerEcho()
+    public override void OnPlayerEcho(Mob other)
     {
-        base.OnPlayerEcho();
+        base.OnPlayerEcho(other);
         ai.SetAggro(true);
-        if (damageable != null && damageable.Character != null)
-        {
-            string hearMes = HearMessage;
-            hearMes = hearMes.Replace("{thing}", damageable.Character.name);
-            MessageManager.ShowMessage(hearMes);
-        }
     }
-    public override void OnPlayerTouch()
+    public override void OnPlayerTouch(Mob other)
     {
-        base.OnPlayerTouch();
+        base.OnPlayerTouch(other);
         if (CombatController.main!=null)
         {
-            CombatController.main.InitialzieCombat(PlayerMob.main.damageable, damageable);
+            CombatController.main.InitialzieCombat(other.damageable, damageable);
         }
     }
     protected override void Start()

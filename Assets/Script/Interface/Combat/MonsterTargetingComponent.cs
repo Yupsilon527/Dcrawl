@@ -9,6 +9,7 @@ public class MonsterTargetingComponent : MonoBehaviour
     public RectTransform monsterHitbox;
 
     public float monsterAttackDuration = .5f;
+    public float monsterHurtDuration = .15f;
     public GameObject monsterAttack;
 
 
@@ -27,12 +28,20 @@ public class MonsterTargetingComponent : MonoBehaviour
     Coroutine AttackCoroutine;
     public void ShowMonsterAttack()
     {
+        ShowMonster(monsterAttackDuration);
+    }
+    public void ShowMonsterGetHurt()
+    {
+        ShowMonster(monsterHurtDuration);
+    }
+    void ShowMonster(float Dur)
+    {
         if (AttackCoroutine != null)
             StopCoroutine(AttackCoroutine);
 
-        AttackCoroutine = StartCoroutine(ShowMonsterAttackForDuration(monsterAttackDuration));
+        AttackCoroutine = StartCoroutine(ShowMonsterForDuration(Dur));
     }
-    IEnumerator ShowMonsterAttackForDuration( float dur)
+    IEnumerator ShowMonsterForDuration( float dur)
     {
             monsterAttack?.SetActive(true);
         yield return new WaitForSecondsRealtime(dur);

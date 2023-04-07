@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMob : Mob
 {
@@ -38,9 +39,13 @@ public class PlayerMob : Mob
         if (sense!=null)
             sense.HandlePlayerSight();
     }
+    public string deathScene = "You wake up in a damp cavern...";
     public override void Die()
     {
         base.Die();
-        //TODO end game screen
+        if (this == main)
+        {
+            SceneManager.LoadScene(deathScene, LoadSceneMode.Single);
+        }
     }
 }

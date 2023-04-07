@@ -65,10 +65,13 @@ public class Movement : BaseComponent
             {
                 if (parent == PlayerMob.main)
                 {
-                    string bumpmsg = WallBumpMessage;
-                    bumpmsg = bumpmsg.Replace("{thing}", nTile.LocatedEntity.damageable.Character.name);
-                    MessageManager.ShowMessage(bumpmsg);
-                    nTile.LocatedEntity.OnPlayerTouch();
+                    if (nTile.LocatedEntity.damageable != null && nTile.LocatedEntity.damageable.Character != null)
+                    {
+                        string bumpmsg = WallBumpMessage;
+                        bumpmsg = bumpmsg.Replace("{thing}", nTile.LocatedEntity.damageable.Character.name);
+                        MessageManager.ShowMessage(bumpmsg);
+                    }
+                    nTile.LocatedEntity.OnPlayerTouch(parent);
                 }
                 if (nTile.LocatedEntity == PlayerMob.main)
                 {
@@ -77,7 +80,7 @@ public class Movement : BaseComponent
                     MessageManager.ShowMessage(msg);
 
 
-                    parent.OnPlayerTouch();
+                    parent.OnPlayerTouch(nTile.LocatedEntity);
                 }
             }
             else

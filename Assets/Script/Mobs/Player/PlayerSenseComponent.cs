@@ -38,7 +38,7 @@ public class PlayerSenseComponent : BaseComponent
             else if (forwardTile.LocatedEntity != null)
             {
                 MessageManager.ShowMessage($"{SomethingMessage}{forwardTile.LocatedEntity.name}");
-                forwardTile.LocatedEntity.OnPlayerTouch();
+                forwardTile.LocatedEntity.OnPlayerTouch(parent);
             }
             else if (emptyTileSound != null)
             {
@@ -85,7 +85,7 @@ public class PlayerSenseComponent : BaseComponent
                 if (dit.LocatedEntity != null && CuriosityParticle != null)
                 {
                     Effect = GameManager.main.effectPool.PoolItem(CuriosityParticle);
-                    dit.LocatedEntity.OnPlayerEcho();
+                    dit.LocatedEntity.OnPlayerEcho(parent);
                     intrerupted = true;
                 }
                 else if (dit.IsPassible() && SoundParticle != null)

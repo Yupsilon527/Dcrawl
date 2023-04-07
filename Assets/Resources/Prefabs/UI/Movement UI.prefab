@@ -1204,7 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1cdf3ffc14f9f44b8d3e6a49bf9da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionInterval: 0.33
+  ActionInterval: 0.25
 --- !u!1 &9128745969535997565
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,9 +14,16 @@ public class AiComponent : BaseComponent
     public int behaviorData;
 
     bool aggroed = false;
+    public string AggroMessage = "The {thing} hears you...";
     public void SetAggro(bool value)
     {
         aggroed = value;
+        if (parent.damageable != null && parent.damageable.Character != null)
+        {
+            string hearMes = AggroMessage;
+            hearMes = hearMes.Replace("{thing}", parent.damageable.Character.name);
+            MessageManager.ShowMessage(hearMes);
+        }
     }
     public void ResolveTurn()
     {

@@ -34,6 +34,7 @@ public class CombatInterface : MonoBehaviour
     public void RegisterPlayerMiss()
     {
         CombatController.main.PlayerAttack(true);
+        monsterTargetingComponent.ShowMonsterGetHurt();
     }
 
 }

@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ExitMob : MonoBehaviour
+public class ExitMob : Mob
 {
-    // Start is called before the first frame update
-    void Start()
+    public string exitScene;
+    public override void OnPlayerTouch(Mob other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other == PlayerMob.main)
+        {
+            SceneManager.LoadScene(exitScene, LoadSceneMode.Single);
+        }
     }
 }

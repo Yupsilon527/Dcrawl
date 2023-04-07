@@ -8,6 +8,17 @@ public class PlayerController : MonoBehaviour
     {
         ReadKeyboard();
     }
+    float LastActionTime = 0f;
+    public float ActionInterval = .2f;
+    bool TryAct()
+    {
+        if (LastActionTime<Time.time)
+        {
+            LastActionTime = Time.time + ActionInterval;
+            return true;
+        }
+        return false;
+    }
     void ReadKeyboard()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -37,7 +48,7 @@ public class PlayerController : MonoBehaviour
     }
     public void MovePlayerForward()
     {
-        if (PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
+        if (TryAct() && PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
         {
               if (PlayerMob.main.movement.MoveForward())
             {
@@ -51,7 +62,7 @@ public class PlayerController : MonoBehaviour
     }
     public void TurnaPlayerRight()
     {
-        if (PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
+        if (TryAct() && PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
         {
             PlayerMob.main.movement.Turn(true, PlayerMob.main.movement.DefaultTurnSpeed);
           //  GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
@@ -59,7 +70,7 @@ public class PlayerController : MonoBehaviour
     }
     public void TurnaPlayerLeft()
     {
-        if (PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
+        if (TryAct() && PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.movement != null)
         {
             PlayerMob.main.movement.Turn(false, PlayerMob.main.movement.DefaultTurnSpeed);
             //GameManager.main.ForwardTurn(PlayerMob.main.TurnAP);
@@ -71,14 +82,14 @@ public class PlayerController : MonoBehaviour
     }
     public void HandleTouch()
     {
-        if (PlayerMob.main != null && PlayerMob.main .CanAct() && PlayerMob.main.sense != null)
+        if (TryAct() && PlayerMob.main != null && PlayerMob.main .CanAct() && PlayerMob.main.sense != null)
         {
             PlayerMob.main.sense.HandlePlayerTouch();
         }
     }
     public void HandleEcho()
     {
-        if (PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.sense != null)
+        if (TryAct() && PlayerMob.main != null && PlayerMob.main.CanAct() && PlayerMob.main.sense != null)
         {
             PlayerMob.main.sense.HandlePlayerEcho();
         }

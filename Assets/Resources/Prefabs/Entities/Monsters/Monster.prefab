@@ -122,6 +122,7 @@ MonoBehaviour:
   monsterCall: {fileID: 8300000, guid: 2cbb26f2d9415474eaa3c4265b2d7e56, type: 3}
   noiseParticle: {fileID: 0}
   ai: {fileID: 0}
+  HearMessage: The {thing} hears you...
 --- !u!114 &2708538036478331601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,11 +136,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 7512221933196274831}
-  footstepSound: {fileID: 0}
+  footstepSound: {fileID: 8300000, guid: 6fdf276d79501ec4081ef2f07e02a0cb, type: 3}
   wallbumpSound: {fileID: 0}
   DefaultWalkSpeed: 0.5
   DefaultTurnSpeed: 0.25
   WallBumpDamage: 0
+  WallBumpMessage: You bump into the {thing}!
+  EntityBumpMessage: The {thing} attacks you!
   myTile: {fileID: 0}
 --- !u!114 &2708538036478331182
 MonoBehaviour:
@@ -177,7 +180,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -212,7 +215,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

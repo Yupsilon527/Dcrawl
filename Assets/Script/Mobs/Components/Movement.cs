@@ -66,14 +66,14 @@ public class Movement : BaseComponent
                 if (parent == PlayerMob.main)
                 {
                     string bumpmsg = WallBumpMessage;
-                    bumpmsg.Replace("{thing}", parent.damageable.Character.name);
+                    bumpmsg = bumpmsg.Replace("{thing}", nTile.LocatedEntity.damageable.Character.name);
                     MessageManager.ShowMessage(bumpmsg);
                     nTile.LocatedEntity.OnPlayerTouch();
                 }
                 if (nTile.LocatedEntity == PlayerMob.main)
                 {
                     string msg = EntityBumpMessage;
-                    msg= msg.Replace("{thing}", parent.damageable.Character.name);
+                    msg = msg.Replace("{thing}", parent.damageable.Character.name);
                     MessageManager.ShowMessage(msg);
 
 

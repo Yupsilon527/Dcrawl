@@ -25,7 +25,7 @@ public class PlayerSenseComponent : BaseComponent
             {
                 MessageManager.ShowMessage(WallMessage);
                 DrawTouchEffect();
-                    AudioManager.Instance.PlaySfx("Wall sound", 4);
+                    AudioManager.Instance.PlaySfx("Wall sound", 4); //SFX player touches wall
 
             }
             else if (forwardTile.LocatedEntity != null)
@@ -36,7 +36,7 @@ public class PlayerSenseComponent : BaseComponent
             else 
             {
                 MessageManager.ShowMessage(EmptyMessage);
-                AudioManager.Instance.PlaySfx("Empty hand swipe", 0);
+                AudioManager.Instance.PlaySfx("Empty hand swipe", 0);   //SFX player touches empty space
             }
             //GameManager.main.ForwardTurn(PlayerMob.main.ActionAP);
         }
@@ -66,7 +66,7 @@ public class PlayerSenseComponent : BaseComponent
     {
         MessageManager.ShowMessage(EchoMessage);
         yield return new WaitForSeconds(ActionDuration);
-        AudioManager.Instance.PlaySfx("Player Call", 2);
+        AudioManager.Instance.PlaySfx("Player Call", 2);    //SFX player shout
         Vector2Int cTile = startPos + dir;
         bool intrerupted = false;
         for (int i = 1; i < EchoRange && !intrerupted; i++)

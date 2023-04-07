@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Dodge
   m_EditorClassIdentifier: 
   TooltipDescription: 
-  AbilitySound: {fileID: 0}
+  AbilitySoundName: 
   AttackValue: 0
-  DefenseValue: 0
+  DefenseValue: 20
   AttackCount: 0
   ActionPoints: 3

@@ -39,6 +39,7 @@ public class MinimapManager : MonoBehaviour
     }
     public void UpdateMinimapAroundPlayer()
     {
+        if (minimapImage == null) return;
         DrawPlayerPosition();
         minimapImage.Apply();
     }
@@ -60,9 +61,9 @@ public class MinimapManager : MonoBehaviour
     }
     void DrawPlayerPosition()
     {
-        if (PlayerMob.main!=null)
+        if (minimapImage!= null && PlayerMob.main!=null && PlayerMob.main.movement!=null)
         {
-            var gridPos = PlayerMob.main.movement.myTile.gridPos;
+            Vector2Int gridPos = PlayerMob.main.movement.myTile.gridPos;
             UpdateRect(gridPos.x - 1, gridPos.y - 1, gridPos.x + 1, gridPos.y + 1);
             minimapImage.SetPixel(gridPos.x + minimapOffset.x, gridPos.y + minimapOffset.y, Color.white);
         }

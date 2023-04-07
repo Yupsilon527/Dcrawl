@@ -226,7 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   monster: {fileID: 0}
-  missSound: {fileID: 0}
+  missSound: {fileID: 8300000, guid: d7d0c0000b61e244daa1d7fbd511a8f3, type: 3}
   PlayerHitMessage: You hit the {M} for {damage} damage!
   PlayerBlockedMessage: Your attack was blocked!
   PlayerMissMessage: You missed!

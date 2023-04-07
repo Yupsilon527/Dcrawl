@@ -46,4 +46,5 @@ public class DisplayItemTile : MonoBehaviour
         Vector2Int delta = gridPos - other.gridPos;
         return delta.sqrMagnitude;
     }
+    public bool Revealed = false;
 }

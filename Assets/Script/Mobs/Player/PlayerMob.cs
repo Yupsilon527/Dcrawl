@@ -38,6 +38,10 @@ public class PlayerMob : Mob
         base.PostMove();
         if (sense!=null)
             sense.HandlePlayerSight();
+        if (movement != null)
+            movement.myTile.Revealed = true;
+        if (MinimapManager.main != null)
+            MinimapManager.main.UpdateMinimapAroundPlayer();
     }
     public string deathScene = "You wake up in a damp cavern...";
     public override void Die()

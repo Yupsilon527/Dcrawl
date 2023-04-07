@@ -93,6 +93,10 @@ public class DataItemWorld : MonoBehaviour
         
         public DisplayItemTile GetTile(Vector2Int pos, bool real)
         {
+        if (Tiles == null)
+        {
+            return null;
+        }
             if (!real)
         {
             int w = Tiles.GetLength(0);

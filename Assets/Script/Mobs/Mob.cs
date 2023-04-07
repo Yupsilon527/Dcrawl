@@ -27,7 +27,7 @@ public class Mob : MonoBehaviour
     public virtual void OnPlayerEcho(Mob other)
     {
         if (audio != null && monsterCall != null)
-            audio.PlayOneShot(monsterCall);
+            audio.PlayOneShot(monsterCall); //SFX monster call sound, that it used to reply when it is in front of the player
         Debug.Log($"Player shouts at {name}");
     }
     public virtual void OnPlayerTouch(Mob other)

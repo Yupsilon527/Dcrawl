@@ -79,8 +79,11 @@ public class CombatController : MonoBehaviour
                 MessageManager.ShowMessage(PlayerMissMessage);
             }
             player.NumAttacks++;
-            if (player.NumAttacks>= playerattack.AttackCount)
+            if (player.NumAttacks >= playerattack.AttackCount)
+            {
                 GameInterface.main.CombatInterface.monsterTargetingComponent.SetTargetText(false);
+                GameInterface.main.ChangeCursor(GameInterface.CursorMode.normal);
+            }
         }
     }
 
@@ -209,5 +212,6 @@ public class CombatController : MonoBehaviour
         MessageManager.ShowMessage($"{monster.Character.name}{DefeatMessage}");
         GameInterface.main.ChangeState(GameInterface.State.hubworld);
         enabled = false;
+        GameInterface.main.ChangeCursor(GameInterface.CursorMode.normal);
     }
 }

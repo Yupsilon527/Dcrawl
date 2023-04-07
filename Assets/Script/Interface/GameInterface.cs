@@ -10,6 +10,7 @@ public class GameInterface : MonoBehaviour
     {
         main = this;
         ChangeState(State.hubworld);
+        ChangeCursor(CursorMode.normal);
     }
     public enum State
     {
@@ -23,4 +24,28 @@ public class GameInterface : MonoBehaviour
     }
     public PlayerController PlayerControlInterface;
     public CombatInterface CombatInterface;
+    #region Cursor
+    public enum CursorMode
+    {
+        normal,
+        attack
+    }
+    public Sprite defaultCursor;
+    public Sprite attackCursor;
+
+    public void ChangeCursor(CursorMode nCursor)
+    {
+        switch (nCursor)
+        {
+            case CursorMode.attack:
+                if (attackCursor!=null)
+                Cursor.SetCursor(attackCursor.texture, attackCursor.pivot, UnityEngine.CursorMode.Auto);
+                break;
+            case CursorMode.normal:
+                if (defaultCursor != null)
+                    Cursor.SetCursor(defaultCursor.texture, defaultCursor.pivot, UnityEngine.CursorMode.Auto);
+                break;
+        }
+    }
+    #endregion
 }

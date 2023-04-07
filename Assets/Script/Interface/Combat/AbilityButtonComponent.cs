@@ -24,6 +24,7 @@ public class AbilityButtonComponent : EventTrigger
             if (PlayerMob.main.damageable.CanChangeAttack())
             {
                 PlayerMob.main.damageable.PickAttack(attackID);
+                GameInterface.main.ChangeCursor(GameInterface.CursorMode.attack);
                 MessageManager.ShowMessage(SelectTargetMessage);
                 GameInterface.main.CombatInterface.monsterTargetingComponent.SetTargetText(true);
             }

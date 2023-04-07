@@ -2674,6 +2674,8 @@ MonoBehaviour:
   playerHealth: {fileID: 1106165196}
   PlayerControlInterface: {fileID: 1086526199}
   CombatInterface: {fileID: 55415241}
+  defaultCursor: {fileID: 21300000, guid: 0bdb3ef14c8c1b14184ce26048656b4d, type: 3}
+  attackCursor: {fileID: 21300000, guid: 8584c46aed3317146b3c50ed48fcd365, type: 3}
 --- !u!1001 &1780468064
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -56,8 +56,7 @@ public class Movement : BaseComponent
 
             if (!nTile.IsPassible())
             {
-                if (parent.audio != null && wallbumpSound != null)
-                    // parent.audio.PlayOneShot(wallbumpSound);
+                if (gameObject.CompareTag("Player"))
                     AudioManager.Instance.PlaySfx("Wall sound", 4);
                 if (WallBumpDamage>0 && parent.damageable!=null)
                     parent.damageable.TakeRawDamage( WallBumpDamage);
@@ -87,9 +86,10 @@ public class Movement : BaseComponent
             }
             else
             {
-                if (parent.audio != null && footstepSound != null)
-                 //parent.audio.PlayOneShot(footstepSound);
+                if (gameObject.CompareTag("Player"))
                     AudioManager.Instance.PlaySfx("Player Footsteps", 3);
+                else if (parent.audio != null && footstepSound != null)
+                            parent.audio.PlayOneShot(footstepSound);
                     ChangeTile(nTile, dur);
                     return true;
                 

@@ -76,7 +76,7 @@ public class CombatController : MonoBehaviour
                     //SFX block message here
                     AudioManager.Instance.PlaySfx("Defend", 6);    //SFX player defend
                 }
-
+                GameInterface.main.CombatInterface.monsterTargetingComponent.ShowMonsterGetHurt();
             }
             else
             {
@@ -122,9 +122,8 @@ public class CombatController : MonoBehaviour
                     string blockMsg = MonsterBlockedMessage;
                     blockMsg = blockMsg.Replace("{M}", monster.Character.name);
                     MessageManager.ShowMessage(blockMsg);
-                }
-                if (monsterattack.AttackValue > 0 )
                     GameInterface.main.CombatInterface.monsterTargetingComponent.ShowMonsterAttack();
+                }
             }
             else
             {

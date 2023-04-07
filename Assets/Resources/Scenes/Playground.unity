@@ -4032,6 +4032,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 53
       objectReference: {fileID: 0}
+    - target: {fileID: 1911197609805540842, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3731897374349557181, guid: 0d98f397296eb894c8e6143f0120ef0d, type: 3}
       propertyPath: m_Reverb
       value: 395

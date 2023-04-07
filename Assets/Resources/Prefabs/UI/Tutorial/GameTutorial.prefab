@@ -556,12 +556,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Adventurer, the cave you''re in is too dark and you cannot rely on your
-    eyesight! You need to rely on your other two senses!
+  m_text: 'Adventurer, you''re lost in the Murky Hollows! The cave you''re in is
+    too dark and you cannot rely on your eyesight! You need to rely on your other
+    two senses!
 
 
-    Use Arrows/WASD to
-    move!'
+    Use Arrows/WASD to move!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5c1b72685f054a4bb1032e57686e453, type: 2}
   m_sharedMaterial: {fileID: 8151633090344024436, guid: c5c1b72685f054a4bb1032e57686e453, type: 2}

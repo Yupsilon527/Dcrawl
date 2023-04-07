@@ -39,11 +39,11 @@ public class GameInterface : MonoBehaviour
         {
             case CursorMode.attack:
                 if (attackCursor!=null)
-                Cursor.SetCursor(attackCursor.texture, attackCursor.pivot, UnityEngine.CursorMode.Auto);
+                Cursor.SetCursor(attackCursor.texture, attackCursor.pivot, UnityEngine.CursorMode.ForceSoftware);
                 break;
             case CursorMode.normal:
                 if (defaultCursor != null)
-                    Cursor.SetCursor(defaultCursor.texture, defaultCursor.pivot, UnityEngine.CursorMode.Auto);
+                    Cursor.SetCursor(defaultCursor.texture, defaultCursor.pivot, UnityEngine.CursorMode.ForceSoftware);
                 break;
         }
     }

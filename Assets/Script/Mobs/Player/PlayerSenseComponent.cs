@@ -63,7 +63,6 @@ public class PlayerSenseComponent : BaseComponent
         Vector2Int startPos = parent.movement.myTile.gridPos;
         Vector2Int dir = parent.movement.GetForward();
         //EchoSounds.PlayOneShot(EchoSound);
-        AudioManager.Instance.PlaySfx("Player Call", 2);
 
         if (EchoCoroutine == null)
             StartCoroutine(EchoEffect(startPos,dir));
@@ -74,6 +73,7 @@ public class PlayerSenseComponent : BaseComponent
     {
         MessageManager.ShowMessage(EchoMessage);
         yield return new WaitForSeconds(ActionDuration);
+        AudioManager.Instance.PlaySfx("Player Call", 2);
         Vector2Int cTile = startPos + dir;
         bool intrerupted = false;
         for (int i = 1; i < EchoRange && !intrerupted; i++)

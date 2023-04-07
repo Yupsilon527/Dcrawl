@@ -286,6 +286,7 @@ Transform:
   - {fileID: 738300768}
   - {fileID: 134482145}
   - {fileID: 548169365}
+  - {fileID: 135598788}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -996,18 +997,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
-      propertyPath: sfx.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7d42f51a33c67ae4bbaa4109fb140f80, type: 3}
-    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
-      propertyPath: sfx.Array.data[10].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
-    - target: {fileID: 7037463379255659122, guid: bcecbad55abcd874595810be9591bb11, type: 3}
-      propertyPath: sfx.Array.data[11].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: a5e5ed0700659e34b8957a3e4634d996, type: 3}
+    - target: {fileID: 814766776, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: m_Pitch
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 814766776, guid: bcecbad55abcd874595810be9591bb11, type: 3}
+      propertyPath: Priority
+      value: 159
+      objectReference: {fileID: 0}
     - target: {fileID: 7037463379255659123, guid: bcecbad55abcd874595810be9591bb11, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1455,26 +1452,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 267957206}
-    - target: {fileID: 905422761697498221, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
       propertyPath: m_Name
       value: Level 3 Aggro (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 905422761697499026, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: behavior
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703688487045132851, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: monsterCall
-      value: 
-      objectReference: {fileID: 8300000, guid: 39e531a1448d2ab4689fb41dba050a52, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
 --- !u!4 &134482145 stripped
@@ -1482,6 +1463,162 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 905422761697498218, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
   m_PrefabInstance: {fileID: 134482144}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &135598787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 135598788}
+  - component: {fileID: 135598789}
+  - component: {fileID: 135598794}
+  - component: {fileID: 135598795}
+  m_Layer: 0
+  m_Name: CreepySoundTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &135598788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135598787}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -548.5, y: -497.75, z: 6.32}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 24748533}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &135598789
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135598787}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 39e531a1448d2ab4689fb41dba050a52, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.289
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 210
+  DopplerLevel: 0.27
+  MinDistance: 1
+  MaxDistance: 3
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.16283163
+      value: 0.9560013
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.5
+      outSlope: -1.5
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.941
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5138889
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.866
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &135598794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135598787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37f3fa46e18c614a97fd459826c1af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 39e531a1448d2ab4689fb41dba050a52, type: 3}
+--- !u!65 &135598795
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135598787}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.64, y: 5.38, z: 7.25}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &137267574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6469,17 +6606,9 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 241951578}
-    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affa6012516902e46b7cb807d9872150, type: 3}
@@ -7469,14 +7598,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 24748533}
     m_Modifications:
-    - target: {fileID: 4183276415153121825, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: Priority
-      value: 166
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183276415153121825, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 0.644
-      objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923488, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7525,17 +7646,9 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 716744133}
-    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affa6012516902e46b7cb807d9872150, type: 3}
@@ -9463,10 +9576,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 1718591273}
-    - target: {fileID: 6718595667393656386, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 6718595667393656389, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9514,10 +9623,6 @@ PrefabInstance:
     - target: {fileID: 6718595667393656409, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: m_Name
       value: Level 1 Idle
-      objectReference: {fileID: 0}
-    - target: {fileID: 6718595667393656409, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
@@ -10034,30 +10139,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 24748533}
     m_Modifications:
-    - target: {fileID: 2615988919307508501, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
-      propertyPath: Priority
-      value: 185
-      objectReference: {fileID: 0}
-    - target: {fileID: 2615988919307508501, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 0.247
-      objectReference: {fileID: 0}
     - target: {fileID: 7966512453169452936, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
       propertyPath: m_Name
       value: Level 1 Roaming (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7966512453169452936, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7966512453169452947, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
       propertyPath: myTile
       value: 
       objectReference: {fileID: 172172100}
-    - target: {fileID: 7966512453169452947, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 7966512453169452948, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -14008,17 +14097,9 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 346664953}
-    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affa6012516902e46b7cb807d9872150, type: 3}
@@ -15884,33 +15965,9 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 1390325924}
-    - target: {fileID: 905422761697498221, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
       propertyPath: m_Name
       value: Level 3 Aggro (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703688487045132851, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: monsterCall
-      value: 
-      objectReference: {fileID: 8300000, guid: fd263f1d00b76e7498f072c79d45736c, type: 3}
-    - target: {fileID: 5067629187809073387, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: Priority
-      value: 178
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067629187809073387, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: m_Volume
-      value: 0.902
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067629187809073387, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 0.717
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
@@ -18527,6 +18584,10 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 1319982639}
+    - target: {fileID: 2739647066059456405, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2739647066059456406, guid: df75c7caba5e8cb498804ea27d6a0214, type: 3}
       propertyPath: m_RootOrder
       value: 0

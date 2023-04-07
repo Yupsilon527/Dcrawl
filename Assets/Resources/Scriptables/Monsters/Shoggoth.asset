@@ -15,6 +15,6 @@ MonoBehaviour:
   MaximumLife: 120
   Attacks:
   - {fileID: 11400000, guid: 98dd0c3fea5dd8648accfef47996eba2, type: 2}
-  - {fileID: 11400000, guid: 2554733c51b70c04eb52baa85042b37a, type: 2}
+  - {fileID: 11400000, guid: a76bebbd08099d94aaa1c62d6bd38aca, type: 2}
   - {fileID: 11400000, guid: 5dc768b1d44d70d4fa09aec1ec706861, type: 2}
-  - {fileID: 11400000, guid: 2554733c51b70c04eb52baa85042b37a, type: 2}
+  - {fileID: 11400000, guid: cf4bd3abff8505a4ab907800402d0a0b, type: 2}

@@ -10016,7 +10016,7 @@ MonoBehaviour:
   noiseParticle: {fileID: 0}
   sense: {fileID: 0}
   introMessage: You wake up in a damp cavern...
-  deathScene: You wake up in a damp cavern...
+  deathScene: Death Screen
 --- !u!82 &7838038703135044375
 AudioSource:
   m_ObjectHideFlags: 0

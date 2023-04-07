@@ -239,7 +239,7 @@ MonoBehaviour:
   monsterCall: {fileID: 0}
   noiseParticle: {fileID: 0}
   echoMessage: That's the exit...
-  exitScene: 
+  exitScene: Victory Screen
 --- !u!198 &4426174264868116956
 ParticleSystem:
   m_ObjectHideFlags: 0

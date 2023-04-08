@@ -9970,7 +9970,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2739647066059456394}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -10126,8 +10126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
-  emptyTileSound: {fileID: 8300000, guid: d7d0c0000b61e244daa1d7fbd511a8f3, type: 3}
-  solidTileSound: {fileID: 8300000, guid: 8f5271d4ef10e3040950da470597b5c3, type: 3}
   EchoSound: {fileID: 8300000, guid: 4726669868a286844b28b0b578379802, type: 3}
   mixerGroup: {fileID: 2927092927507583616, guid: c8ab791a3aeda5d4b9efe6e18662136a, type: 2}
   WallMessage: You feel a wall.

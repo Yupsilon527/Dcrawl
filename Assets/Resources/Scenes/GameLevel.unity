@@ -1439,10 +1439,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 267957206}
-    - target: {fileID: 905422761697498221, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
       propertyPath: m_Name
       value: Level 3 Aggro (2)
@@ -1455,10 +1451,6 @@ PrefabInstance:
       propertyPath: behavior
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4703688487045132851, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: monsterCall
-      value: 
-      objectReference: {fileID: 8300000, guid: 39e531a1448d2ab4689fb41dba050a52, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
 --- !u!4 &134482145 stripped
@@ -6453,10 +6445,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 241951578}
-    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (3)
@@ -7509,10 +7497,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 716744133}
-    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (1)
@@ -9435,10 +9419,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 1718591273}
-    - target: {fileID: 6718595667393656386, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 6718595667393656389, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10010,10 +9990,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 172172100}
-    - target: {fileID: 7966512453169452947, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 7966512453169452948, guid: 588f0c0125997524b858b715aaf9aaae, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -13979,10 +13955,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 346664953}
-    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
       value: Level 2 Roaming (2)
@@ -15731,10 +15703,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 1390325924}
-    - target: {fileID: 905422761697498221, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 905422761697498230, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
       propertyPath: m_Name
       value: Level 3 Aggro (1)
@@ -15743,10 +15711,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 4703688487045132851, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
-      propertyPath: monsterCall
-      value: 
-      objectReference: {fileID: 8300000, guid: fd263f1d00b76e7498f072c79d45736c, type: 3}
     - target: {fileID: 5067629187809073387, guid: b9811779988b21b47bc56e8dd6640cb0, type: 3}
       propertyPath: Priority
       value: 178

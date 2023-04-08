@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4402538669858160889, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: monsterCall
+      value: 
+      objectReference: {fileID: 8300000, guid: 39e531a1448d2ab4689fb41dba050a52, type: 3}
     - target: {fileID: 7094940587349761713, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: Character
       value: 

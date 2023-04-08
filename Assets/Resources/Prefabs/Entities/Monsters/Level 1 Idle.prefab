@@ -23,10 +23,6 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2708538036478331601, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
-      propertyPath: footstepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 3adef644a9777a64f868638eb25d6cf2, type: 3}
     - target: {fileID: 2708538036478331606, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
       propertyPath: m_RootOrder
       value: 0

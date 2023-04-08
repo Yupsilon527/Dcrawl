@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 7512221933196274831}
-  footstepSound: {fileID: 8300000, guid: 6fdf276d79501ec4081ef2f07e02a0cb, type: 3}
+  footstepSound: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
   wallbumpSound: {fileID: 0}
   DefaultWalkSpeed: 0.5
   DefaultTurnSpeed: 0.25

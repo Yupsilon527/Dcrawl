@@ -8,8 +8,9 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    public Sound[] sfx, ambient;
-    public AudioSource soundSource, ambientSource;
+    public Sound[] sfx, ambient, droplet;
+    public AudioSource soundSource, ambientSource, dropletSource
+        ;
     public AudioMixerGroup[] channel;
 
     private void Awake()
@@ -28,6 +29,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayAmbient("Level Music");
+        PlayDrops("Droplet");
     }
 
     public void PlaySfx(string name, int sourceIndex)
@@ -60,5 +62,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-   
+    public void PlayDrops(string name)
+    {
+        Sound s = Array.Find(droplet, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Droplet sound not found");
+        }
+        else
+        {
+            dropletSource.clip = s.clip;
+            dropletSource.Play();
+        }
+    }
+
+
 }

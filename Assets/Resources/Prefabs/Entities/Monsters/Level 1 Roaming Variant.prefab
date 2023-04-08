@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1728924826958084804, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
+      propertyPath: Priority
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 1728924826958084804, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.247
+      objectReference: {fileID: 0}
     - target: {fileID: 6718595667393656253, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: behavior
       value: 1
@@ -25,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6718595667393656389, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -544.5
+      value: -541.5
       objectReference: {fileID: 0}
     - target: {fileID: 6718595667393656389, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -65,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6718595667393656409, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}
       propertyPath: m_Name
-      value: Level 1 Roaming Variant
+      value: Level 1 Roaming (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 863bda3a12fc81f46ad017f7867f4a1d, type: 3}

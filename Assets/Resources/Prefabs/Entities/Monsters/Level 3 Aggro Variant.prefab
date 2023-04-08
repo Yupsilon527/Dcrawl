@@ -7,21 +7,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4183276415153121825, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: Priority
+      value: 178
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183276415153121825, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: m_Volume
+      value: 0.902
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183276415153121825, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.717
+      objectReference: {fileID: 0}
     - target: {fileID: 4402538669858160889, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: monsterCall
       value: 
-      objectReference: {fileID: 8300000, guid: 39e531a1448d2ab4689fb41dba050a52, type: 3}
+      objectReference: {fileID: 8300000, guid: fd263f1d00b76e7498f072c79d45736c, type: 3}
     - target: {fileID: 7094940587349761713, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: Character
       value: 
       objectReference: {fileID: 11400000, guid: 447f1424fcb35eb4582c94cdc10405d5, type: 2}
     - target: {fileID: 8128605272725923160, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: behavior
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923160, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: behaviorData
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923488, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_RootOrder
@@ -29,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923488, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -547.5
+      value: -543.5
       objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923488, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923488, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8128605272725923488, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_LocalRotation.w
@@ -71,9 +83,17 @@ PrefabInstance:
       propertyPath: myTile
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8128605272725923495, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
       propertyPath: m_Name
-      value: Level 3 Aggro Variant
+      value: Level 3 Aggro (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128605272725923516, guid: affa6012516902e46b7cb807d9872150, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: affa6012516902e46b7cb807d9872150, type: 3}

@@ -19,17 +19,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2708538036478331594, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2708538036478331601, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
       propertyPath: myTile
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2708538036478331601, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
     - target: {fileID: 2708538036478331606, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2708538036478331606, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -546.5
+      value: -545.5
       objectReference: {fileID: 0}
     - target: {fileID: 2708538036478331606, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2708538036478331606, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.04
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2708538036478331606, guid: 324a8bd4ee047a249bf5f45e381a5b4a, type: 3}
       propertyPath: m_LocalRotation.w

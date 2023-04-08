@@ -45,7 +45,8 @@ public class CombatController : MonoBehaviour
             GameInterface.main.CombatInterface.AssignFighterSide(player, true);
             GameInterface.main.CombatInterface.AssignFighterSide(monster, false);
 
-            //SFX here is where combat begins/where combat music could start playing
+
+            AudioManager.Instance.PlaySfx("Battle Start", 6); //SFX footsteps//SFX here is where combat begins/where combat music could start playing
         }
     }
     public AudioClip missSound;
@@ -221,6 +222,6 @@ public class CombatController : MonoBehaviour
         GameInterface.main.ChangeState(GameInterface.State.hubworld);
         enabled = false;
         GameInterface.main.ChangeCursor(GameInterface.CursorMode.normal);
-        //SFX here is where victory jingle should play, and combat music should stop
+        AudioManager.Instance.PlaySfx("Battle Victory", 6);//SFX here is where victory jingle should play, and combat music should stop
     }
 }

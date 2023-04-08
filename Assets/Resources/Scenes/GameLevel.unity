@@ -19144,6 +19144,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1746223281}
     m_Modifications:
+    - target: {fileID: 9152087569429504081, guid: a3561da6fe9bc8245bcc0ad67650abe2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9152087570428969920, guid: a3561da6fe9bc8245bcc0ad67650abe2, type: 3}
       propertyPath: m_Name
       value: Combat UI

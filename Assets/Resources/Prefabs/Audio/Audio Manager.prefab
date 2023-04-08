@@ -328,6 +328,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 34f5ffef0f991b54e916c949e1fdd633, type: 3}
   - name: Monster Attack
     clip: {fileID: 8300000, guid: a5e5ed0700659e34b8957a3e4634d996, type: 3}
+  - name: Battle Start
+    clip: {fileID: 8300000, guid: a5e5ed0700659e34b8957a3e4634d996, type: 3}
+  - name: Battle Victory
+    clip: {fileID: 8300000, guid: a5e5ed0700659e34b8957a3e4634d996, type: 3}
   ambient:
   - name: Level Music
     clip: {fileID: 8300000, guid: 803e054b113c59543920f6512739f546, type: 3}
